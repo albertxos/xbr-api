@@ -26,6 +26,12 @@ https://www.infoq.com/articles/eventlog-api-raml/
     XBR standard payment API that every provider service
     must implement.
 
+    @type pricing_scheme_description
+
+        Description of a pricing scheme.
+
+
+
     .. xbr:error no_such_key(msg, key_id)
 
         The specified key was not found.
