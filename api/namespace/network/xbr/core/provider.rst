@@ -126,3 +126,53 @@ The XBR Service Payment API defines the following WAMP procedures, events and er
         :rtype: int256
         :raises ApplicationError: ``xbr.service.payment.error.no-such-key``
 
+
+
+
+
+
+.. xbr::interface network.xbr.payment
+
+    XBR standard payment API that every provider service
+    must implement.
+
+    @type pricing_scheme_description
+
+        Description of a pricing scheme.
+
+
+
+    .. xbr:error no_such_key(msg, key_id)
+
+        The specified key was not found.
+
+        @param msg: A human readable error message.
+        @type msg: str
+
+        @param key_id: The key that was specified and not found.
+        @type key_id: bytes32
+
+    .. xbr::procedure quote(key_id, duration=10)
+
+        Get a quote for the given ``key_id``.
+
+        @param key_id: ID of the key to get a quote for.
+        @type key_id: bytes32
+
+        @param duration: The duration in seconds for which
+            the quote is requested to hold.
+        @type duration: int
+
+        @returns: A quoted price in XBR token.
+        @rtype: int256
+
+        @raises: no_such_key
+
+    .. xbr::event on_channel_close_requested(channel_id)
+
+        A payment channel participant has requested to closed the
+        payment channel.
+
+        @param channel_id: The ID of the channel that was requested
+            to be closed.
+        @type channel_id: int256

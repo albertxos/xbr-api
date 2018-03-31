@@ -16,3 +16,5 @@ While the former can be chosen freely by the XBR Provider of the data service, t
 
    core/index.rst
    mobility/index.rst
+   consumer/index.rst
+   internet/index.rst

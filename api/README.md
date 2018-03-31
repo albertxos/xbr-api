@@ -5,6 +5,19 @@ This folder contains the sources for building the XBR API Hub documentation and 
 ---
 
 
+## Why Sphinx?
+
+> If you work in open source, then it's increasingly likely that you've come across the Sphinx documentation tool. Originally written by and for the Python community, the past few years have seen an increasingly rapid adoption by non-Python projects. Recent adopters of Sphinx include the Linux kernel, Open vSwitch and the Dataplane Development Kit (DPDK), while other projects such as QEMU are preparing plans to migrate.
+[FOSDEM talk about Sphinx](https://fosdem.org/2018/schedule/event/automating_documentation_with_sphinx_extensions/)
+
+
+There is now a strong consensus that APIs should be designed from front-to-back with an emphasis on the developer usability of the API. In a crowded economy with many competing products and many competing API implementations, the easy to use and well designed APIs will have an advantage in attracting and retaining developers.
+
+Humans are the key ingredients in API design which means that API design tools and documentation formats must be human readable and writeable. Recent API documentation standards strive to be "human-centric."
+
+https://www.infoq.com/articles/eventlog-api-raml/
+
+
 ## Building the docs
 
 You need the following tools to build the docs:

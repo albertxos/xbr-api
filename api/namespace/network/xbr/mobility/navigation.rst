@@ -18,6 +18,8 @@ INavigationMonitor
     .. warning::
 
         This API provides read-only, but privacy-sensitive data.
+        For an API that exposes no privacy sensitive data, see
+        :xbr:interface:`IAnonymousNavigationMonitor`
 
     .. xbr:event:: on_navigation_started(navigation_id, destination_name, coordinates, estimated_arrival, estimated_distance)
 
@@ -112,6 +114,23 @@ IAnonymousNavigationMonitor
         For an API that exposes a richer set of information, see
         :xbr:interface:`INavigationMonitor`
 
+    .. xbr:procedure:: get_navigation_details(navigation_id=None)
+
+        Procedure to access navigation details of a navigation.
+
+        For a currently running navigation, this procedure always returns. For a navigation that already ended, access to
+        historical data is service implementation defined.
+
+        :param navigation_id: The ID of the navigation for which to
+            return navigation details. If ``None``, return details for
+            current running navigation (if any).
+        :type navigation_id: str
+        :returns: Navigation details, mainly navigation status
+            (reason), estimated distance and estimated
+            time-to-arrival.
+        :rtype: dict
+        :raises: no_such_navigation
+
     .. xbr:event:: on_navigation_started(navigation_id, estimated_arrival, estimated_distance)
 
         Event fired when a new navigation destination has been entered
@@ -166,22 +185,3 @@ IAnonymousNavigationMonitor
             ISO 8601 format, eg ``2018-03-31T15:13:21.978Z``). In case
             of destination reached, this is the actual arrival time.
         :type ended: str
-
-    .. xbr:procedure:: get_navigation_details(navigation_id=None)
-
-        Procedure to access navigation details of a navigation.
-
-        .. note::
-
-            For a currently running navigation, this procedure always returns. For a navigation that already ended, access to
-            historical data is service implementation defined.
-
-        :param navigation_id: The ID of the navigation for which to
-            return navigation details. If ``None``, return details for
-            current running navigation (if any).
-        :type navigation_id: str
-        :returns: Navigation details, mainly navigation status
-            (reason), estimated distance and estimated
-            time-to-arrival.
-        :rtype: dict
-        :raises: no_such_navigation
