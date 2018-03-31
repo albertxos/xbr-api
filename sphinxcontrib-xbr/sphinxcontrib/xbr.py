@@ -210,6 +210,7 @@ class XBRObject(ObjectDescription):
                             'keyword', 'kwarg', 'kwparam'),
                      typerolename='interface', typenames=('paramtype', 'type'),
                      can_collapse=True),
+
         XBRTypedField('variable', label=_('Variables'), rolename='obj',
                      names=('var', 'ivar', 'cvar'),
                      typerolename='interface', typenames=('vartype',),
@@ -219,6 +220,7 @@ class XBRObject(ObjectDescription):
                        names=('raises', 'raise', 'exception', 'except'),
                        can_collapse=True),
 
+
         XBRGroupedField('publications', label=_('Publications'), rolename='pub',
                        names=('publishes', 'publish', 'publication'),
                        can_collapse=True),
@@ -227,6 +229,9 @@ class XBRObject(ObjectDescription):
               names=('returns', 'return')),
         XBRField('returntype', label=_('Return type'), has_arg=False,
                 names=('rtype',), bodyrolename='interface'),
+
+        Field('price', label=_('Price'), has_arg=False,
+              names=('price',)),
     ]
 
     allow_nesting = False

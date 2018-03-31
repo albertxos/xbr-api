@@ -5,6 +5,8 @@ This is the reference documentation for the XBR API library,
 a collection of community created and curated interfaces
 ready to use for XBR providers and consumers.
 
+Fork XBR API on `GitHub <https://github.com/xbr/xbr-api>`_ and contribute!
+
 .. toctree::
    :maxdepth: 3
    :caption: XBR API Hub Namespaces:
