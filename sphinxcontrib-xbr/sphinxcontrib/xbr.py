@@ -454,7 +454,7 @@ class XBRInterfacelike(XBRObject):
 
     def get_signature_prefix(self, sig):
         # type: (unicode) -> unicode
-        return self.objtype + ' '
+        return self.objtype.capitalize() + ' '
 
     def get_index_text(self, nsname, name_ifc):
         # type: (unicode, unicode) -> unicode
@@ -482,7 +482,7 @@ class XBRInterfacemember(XBRObject):
         if self.objtype == 'staticmethod':
             return 'static '
         elif self.objtype in ['interfacemethod', 'event', 'procedure', 'error']:
-            return '{} '.format(self.objtype)
+            return '{} '.format(self.objtype).capitalize()
         return ''
 
     def get_index_text(self, nsname, name_ifc):

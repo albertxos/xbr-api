@@ -45,6 +45,9 @@ with the current time.
 
     Local service time API.
 
+    :version: 1
+    :uuid: 427bffedc63740ffa8d4564560b8a200
+
     .. xbr:procedure:: get_time(format=None)
 
         Current UTC time as seen by the service that
@@ -58,10 +61,12 @@ with the current time.
             eg ``2018-04-01T20:21:00.877Z``.
         :rtype: str
 
-    .. xbr:event:: on_tick(timestamp)
+    .. xbr:event:: on_tick(tick, timestamp)
 
         Event published every second with the current time in UTC.
 
+        :param tick: Tick number starting from 1.
+        :type tick: int
         :param timestamp: Current time in UTC as ISO 8601 string,
             eg ``2018-04-01T20:21:00.877Z``.
-        :type: str
+        :type timestamp: str
