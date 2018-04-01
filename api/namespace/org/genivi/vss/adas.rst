@@ -3,17 +3,33 @@ org.genivi.vss.adas
 
 All Advanced Driver Assist Systems signals
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: org.genivi.vss.adas
 
 IObstacleDetection
 ------------------
+
+Signals form Obstacle Sensor System.
 
 .. xbr:interface:: IObstacleDetection
 
     Signals form Obstacle Sensor System
 
 
-    .. xbr:event:: on_distance_to_object__rear_left(new_value)
+    .. xbr:event:: on_distance_to_object_rear_left(new_value)
 
         :param new_value: Rear left distance to object in meters
         :type new_value: int
@@ -25,7 +41,7 @@ IObstacleDetection
         
 
 
-    .. xbr:event:: on_distance_to_object__front_left(new_value)
+    .. xbr:event:: on_distance_to_object_front_left(new_value)
 
         :param new_value: Front left distance to object in meters
         :type new_value: int
@@ -37,7 +53,7 @@ IObstacleDetection
         
 
 
-    .. xbr:event:: on_distance_to_object__front_right(new_value)
+    .. xbr:event:: on_distance_to_object_front_right(new_value)
 
         :param new_value: Front right distance to object in meters
         :type new_value: int
@@ -49,7 +65,7 @@ IObstacleDetection
         
 
 
-    .. xbr:event:: on_distance_to_object__rear_right(new_value)
+    .. xbr:event:: on_distance_to_object_rear_right(new_value)
 
         :param new_value: Rear right distance to object in meters
         :type new_value: int
@@ -86,6 +102,8 @@ IObstacleDetection
 
 ITCS
 ----
+
+Traction Control System signals.
 
 .. xbr:interface:: ITCS
 
@@ -130,6 +148,8 @@ ITCS
 ICruiseControl
 --------------
 
+Signals from Cruise Control system.
+
 .. xbr:interface:: ICruiseControl
 
     Signals from Cruise Control system
@@ -172,6 +192,8 @@ ICruiseControl
 
 IABS
 ----
+
+Antilock Braking System signals.
 
 .. xbr:interface:: IABS
 
@@ -216,6 +238,8 @@ IABS
 IESC
 ----
 
+Electronic Stability Control System signals.
+
 .. xbr:interface:: IESC
 
     Electronic Stability Control System signals
@@ -258,6 +282,8 @@ IESC
 
 ILaneDepartureDetection
 -----------------------
+
+Signals from Land Departure Detection System.
 
 .. xbr:interface:: ILaneDepartureDetection
 

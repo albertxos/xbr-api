@@ -3,10 +3,26 @@ org.genivi.vss.drivetrain
 
 Drivetrain data for internal combustion engines, transmissions, electric motors, etc.
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: org.genivi.vss.drivetrain
 
 IFuelCell
 ---------
+
+Fuel Cell signals.
 
 .. xbr:interface:: IFuelCell
 
@@ -14,6 +30,8 @@ IFuelCell
 
 IFuelSystem
 -----------
+
+Fuel system signals.
 
 .. xbr:interface:: IFuelSystem
 
@@ -93,6 +111,8 @@ IFuelSystem
 
 ITransmission
 -------------
+
+Transmission-specific data, stopping at the drive shafts..
 
 .. xbr:interface:: ITransmission
 
@@ -185,6 +205,8 @@ ITransmission
 IElectricMotor
 --------------
 
+Electric Motor specific signals..
+
 .. xbr:interface:: IElectricMotor
 
     Electric Motor specific signals.
@@ -192,12 +214,14 @@ IElectricMotor
 IInternalCombustionEngine
 -------------------------
 
+Engine-specific data, stopping at the bell housing..
+
 .. xbr:interface:: IInternalCombustionEngine
 
     Engine-specific data, stopping at the bell housing.
 
 
-    .. xbr:event:: on_engine__e_o_p(new_value)
+    .. xbr:event:: on_engine_eop(new_value)
 
         :param new_value: Engine oil pressure.
         :type new_value: int
@@ -209,7 +233,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__m_a_p(new_value)
+    .. xbr:event:: on_engine_map(new_value)
 
         :param new_value: Manifold air pressure possibly boosted using forced induction.
         :type new_value: int
@@ -221,7 +245,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__power(new_value)
+    .. xbr:event:: on_engine_power(new_value)
 
         :param new_value: Current engine power output.
         :type new_value: int
@@ -233,7 +257,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__e_o_t(new_value)
+    .. xbr:event:: on_engine_eot(new_value)
 
         :param new_value: Engine oil temperature.
         :type new_value: int
@@ -245,7 +269,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__torque(new_value)
+    .. xbr:event:: on_engine_torque(new_value)
 
         :param new_value: Current engine torque.
         :type new_value: int
@@ -257,7 +281,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__ambient_air_temperature(new_value)
+    .. xbr:event:: on_engine_ambient_air_temperature(new_value)
 
         :param new_value: Ambient (Outside) air temperature
         :type new_value: float
@@ -269,7 +293,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__e_c_t(new_value)
+    .. xbr:event:: on_engine_ect(new_value)
 
         :param new_value: Engine coolant temperature.
         :type new_value: int
@@ -281,7 +305,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__t_p_s(new_value)
+    .. xbr:event:: on_engine_tps(new_value)
 
         :param new_value: Current throttle position.
         :type new_value: int
@@ -293,7 +317,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__m_a_f(new_value)
+    .. xbr:event:: on_engine_maf(new_value)
 
         :param new_value: Grams of air drawn into engine per second.
         :type new_value: int
@@ -305,7 +329,7 @@ IInternalCombustionEngine
         
 
 
-    .. xbr:event:: on_engine__speed(new_value)
+    .. xbr:event:: on_engine_speed(new_value)
 
         :param new_value: Engine speed measured as rotations per minute.
         :type new_value: int
@@ -318,6 +342,8 @@ IInternalCombustionEngine
 
 IBatteryManagement
 ------------------
+
+Battery Management signals.
 
 .. xbr:interface:: IBatteryManagement
 

@@ -3,17 +3,33 @@ org.genivi.vss.body
 
 All body components
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: org.genivi.vss.body
 
 IMirrors
 --------
+
+All mirrors.
 
 .. xbr:interface:: IMirrors
 
     All mirrors
 
 
-    .. xbr:event:: on_right__tilt(new_value)
+    .. xbr:event:: on_right_tilt(new_value)
 
         :param new_value: Mirror tilt as a percent. 0 = Center Position. 100 = Fully Upward Position. -100 = Fully Downward Position.
         :type new_value: int
@@ -25,7 +41,7 @@ IMirrors
         :vss_actuator: Mirror Tilt Actuator 
 
 
-    .. xbr:event:: on_right__heating__status(new_value)
+    .. xbr:event:: on_right_heating_status(new_value)
 
         :param new_value: Mirror Heater on or off. True = Heater On. False = Heater Off.
         :type new_value: bool
@@ -37,7 +53,7 @@ IMirrors
         :vss_actuator: Mirror heater 
 
 
-    .. xbr:event:: on_right__pan(new_value)
+    .. xbr:event:: on_right_pan(new_value)
 
         :param new_value: Mirror pan as a percent. 0 = Center Position. 100 = Fully Left Position. -100 = Fully Right Position.
         :type new_value: int
@@ -49,7 +65,7 @@ IMirrors
         :vss_actuator: Mirror Pan Actuator 
 
 
-    .. xbr:event:: on_left__tilt(new_value)
+    .. xbr:event:: on_left_tilt(new_value)
 
         :param new_value: Mirror tilt as a percent. 0 = Center Position. 100 = Fully Upward Position. -100 = Fully Downward Position.
         :type new_value: int
@@ -61,7 +77,7 @@ IMirrors
         :vss_actuator: Mirror Tilt Actuator 
 
 
-    .. xbr:event:: on_left__heating__status(new_value)
+    .. xbr:event:: on_left_heating_status(new_value)
 
         :param new_value: Mirror Heater on or off. True = Heater On. False = Heater Off.
         :type new_value: bool
@@ -73,7 +89,7 @@ IMirrors
         :vss_actuator: Mirror heater 
 
 
-    .. xbr:event:: on_left__pan(new_value)
+    .. xbr:event:: on_left_pan(new_value)
 
         :param new_value: Mirror pan as a percent. 0 = Center Position. 100 = Fully Left Position. -100 = Fully Right Position.
         :type new_value: int
@@ -86,6 +102,8 @@ IMirrors
 
 IHorn
 -----
+
+Horn signals.
 
 .. xbr:interface:: IHorn
 
@@ -105,6 +123,8 @@ IHorn
 
 ILights
 -------
+
+All lights.
 
 .. xbr:interface:: ILights
 
@@ -245,6 +265,8 @@ ILights
 IHood
 -----
 
+Hood status.
+
 .. xbr:interface:: IHood
 
     Hood status
@@ -263,6 +285,8 @@ IHood
 
 ITrunk
 ------
+
+Trunk status.
 
 .. xbr:interface:: ITrunk
 
@@ -295,12 +319,14 @@ ITrunk
 IWindshield
 -----------
 
+Windshield signals.
+
 .. xbr:interface:: IWindshield
 
     Windshield signals
 
 
-    .. xbr:event:: on_front__wiping__status(new_value)
+    .. xbr:event:: on_front_wiping_status(new_value)
 
         :param new_value: Front wiper status
         :type new_value: str
@@ -312,7 +338,7 @@ IWindshield
         :vss_actuator: Wiper 
 
 
-    .. xbr:event:: on_front__heating__status(new_value)
+    .. xbr:event:: on_front_heating_status(new_value)
 
         :param new_value: Front windshield heater status. 0 - off, 1 - on
         :type new_value: bool
@@ -324,7 +350,7 @@ IWindshield
         :vss_actuator: Windshield Heater 
 
 
-    .. xbr:event:: on_front__washer_fluid__level_low(new_value)
+    .. xbr:event:: on_front_washer_fluid_level_low(new_value)
 
         :param new_value: Low level indication for washer fluid. True = Level Low. False = Level OK.
         :type new_value: bool
@@ -336,7 +362,7 @@ IWindshield
         
 
 
-    .. xbr:event:: on_front__washer_fluid__level(new_value)
+    .. xbr:event:: on_front_washer_fluid_level(new_value)
 
         :param new_value: Washer fluid level as a percent. 0 = Empty. 100 = Full.
         :type new_value: int
@@ -348,7 +374,7 @@ IWindshield
         
 
 
-    .. xbr:event:: on_rear__wiping__status(new_value)
+    .. xbr:event:: on_rear_wiping_status(new_value)
 
         :param new_value: Rear wiper status
         :type new_value: str
@@ -360,7 +386,7 @@ IWindshield
         :vss_actuator: Wiper 
 
 
-    .. xbr:event:: on_rear__heating__status(new_value)
+    .. xbr:event:: on_rear_heating_status(new_value)
 
         :param new_value: Rear windshield heater status. 0 - off, 1 - on
         :type new_value: bool
@@ -372,7 +398,7 @@ IWindshield
         :vss_actuator: Windshield Heater 
 
 
-    .. xbr:event:: on_rear__washer_fluid__level_low(new_value)
+    .. xbr:event:: on_rear_washer_fluid_level_low(new_value)
 
         :param new_value: Low level indication for washer fluid. True = Level Low. False = Level OK.
         :type new_value: bool
@@ -384,7 +410,7 @@ IWindshield
         
 
 
-    .. xbr:event:: on_rear__washer_fluid__level(new_value)
+    .. xbr:event:: on_rear_washer_fluid_level(new_value)
 
         :param new_value: Washer fluid level as a percent. 0 = Empty. 100 = Full.
         :type new_value: int
@@ -397,6 +423,8 @@ IWindshield
 
 IRaindetection
 --------------
+
+Rainsensor signals.
 
 .. xbr:interface:: IRaindetection
 

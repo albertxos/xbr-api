@@ -3,17 +3,33 @@ org.genivi.vss.vehicle
 
 Highlevel vehicle data.
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: org.genivi.vss.vehicle
 
 IVehicle
 --------
+
+FIXME.
 
 .. xbr:interface:: IVehicle
 
     FIXME
 
 
-    .. xbr:event:: on_acceleration__lateral(new_value)
+    .. xbr:event:: on_acceleration_lateral(new_value)
 
         :param new_value: Vehicle acceleration in Y (lateral acceleration).
         :type new_value: int
@@ -25,7 +41,7 @@ IVehicle
         
 
 
-    .. xbr:event:: on_acceleration__longitudinal(new_value)
+    .. xbr:event:: on_acceleration_longitudinal(new_value)
 
         :param new_value: Vehicle acceleration in X (longitudinal acceleration).
         :type new_value: int
@@ -37,7 +53,7 @@ IVehicle
         
 
 
-    .. xbr:event:: on_acceleration__vertical(new_value)
+    .. xbr:event:: on_acceleration_vertical(new_value)
 
         :param new_value: Vehicle acceleration in Z (vertical acceleration).
         :type new_value: int
@@ -85,7 +101,7 @@ IVehicle
         
 
 
-    .. xbr:event:: on_angular_velocity__yaw(new_value)
+    .. xbr:event:: on_angular_velocity_yaw(new_value)
 
         :param new_value: Vehicle rotation rate along Z (vertical).
         :type new_value: int
@@ -97,7 +113,7 @@ IVehicle
         
 
 
-    .. xbr:event:: on_angular_velocity__roll(new_value)
+    .. xbr:event:: on_angular_velocity_roll(new_value)
 
         :param new_value: Vehicle rotation rate along X (longitudinal).
         :type new_value: int
@@ -109,7 +125,7 @@ IVehicle
         
 
 
-    .. xbr:event:: on_angular_velocity__pitch(new_value)
+    .. xbr:event:: on_angular_velocity_pitch(new_value)
 
         :param new_value: Vehicle rotation rate along Y (lateral).
         :type new_value: int

@@ -3,10 +3,26 @@ org.genivi.vss.chassis
 
 All signals concerning steering, suspension, wheels, and brakes.
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: org.genivi.vss.chassis
 
 IAccelerator
 ------------
+
+Accelerator signals.
 
 .. xbr:interface:: IAccelerator
 
@@ -27,6 +43,8 @@ IAccelerator
 IBrake
 ------
 
+Brake system signals.
+
 .. xbr:interface:: IBrake
 
     Brake system signals
@@ -45,6 +63,8 @@ IBrake
 
 IParkingBrake
 -------------
+
+Parking brake signals.
 
 .. xbr:interface:: IParkingBrake
 
@@ -65,12 +85,14 @@ IParkingBrake
 IAxle
 -----
 
+Axle signals.
+
 .. xbr:interface:: IAxle
 
     Axle signals
 
 
-    .. xbr:event:: on_row1__wheel__right__brake__fluid_level(new_value)
+    .. xbr:event:: on_row1_wheel_right_brake_fluid_level(new_value)
 
         :param new_value: Brake fluid level as percent. 0 = Empty. 100 = Full.
         :type new_value: int
@@ -82,7 +104,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__right__brake__fluid_level_low(new_value)
+    .. xbr:event:: on_row1_wheel_right_brake_fluid_level_low(new_value)
 
         :param new_value: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
         :type new_value: bool
@@ -94,7 +116,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__right__brake__brakes_worn(new_value)
+    .. xbr:event:: on_row1_wheel_right_brake_brakes_worn(new_value)
 
         :param new_value: Brake pad wear status. True = Worn. False = Not Worn.
         :type new_value: bool
@@ -106,7 +128,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__right__brake__pad_wear(new_value)
+    .. xbr:event:: on_row1_wheel_right_brake_pad_wear(new_value)
 
         :param new_value: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
         :type new_value: int
@@ -118,7 +140,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__right__tire__pressure(new_value)
+    .. xbr:event:: on_row1_wheel_right_tire_pressure(new_value)
 
         :param new_value: Tire pressure in kilo-Pascal
         :type new_value: int
@@ -130,7 +152,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__right__tire__pressure_low(new_value)
+    .. xbr:event:: on_row1_wheel_right_tire_pressure_low(new_value)
 
         :param new_value: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
         :type new_value: bool
@@ -142,7 +164,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__right__tire__temperature(new_value)
+    .. xbr:event:: on_row1_wheel_right_tire_temperature(new_value)
 
         :param new_value: Tire temperature in Celsius.
         :type new_value: float
@@ -154,7 +176,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__left__brake__fluid_level(new_value)
+    .. xbr:event:: on_row1_wheel_left_brake_fluid_level(new_value)
 
         :param new_value: Brake fluid level as percent. 0 = Empty. 100 = Full.
         :type new_value: int
@@ -166,7 +188,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__left__brake__fluid_level_low(new_value)
+    .. xbr:event:: on_row1_wheel_left_brake_fluid_level_low(new_value)
 
         :param new_value: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
         :type new_value: bool
@@ -178,7 +200,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__left__brake__brakes_worn(new_value)
+    .. xbr:event:: on_row1_wheel_left_brake_brakes_worn(new_value)
 
         :param new_value: Brake pad wear status. True = Worn. False = Not Worn.
         :type new_value: bool
@@ -190,7 +212,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__left__brake__pad_wear(new_value)
+    .. xbr:event:: on_row1_wheel_left_brake_pad_wear(new_value)
 
         :param new_value: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
         :type new_value: int
@@ -202,7 +224,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__left__tire__pressure(new_value)
+    .. xbr:event:: on_row1_wheel_left_tire_pressure(new_value)
 
         :param new_value: Tire pressure in kilo-Pascal
         :type new_value: int
@@ -214,7 +236,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__left__tire__pressure_low(new_value)
+    .. xbr:event:: on_row1_wheel_left_tire_pressure_low(new_value)
 
         :param new_value: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
         :type new_value: bool
@@ -226,7 +248,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row1__wheel__left__tire__temperature(new_value)
+    .. xbr:event:: on_row1_wheel_left_tire_temperature(new_value)
 
         :param new_value: Tire temperature in Celsius.
         :type new_value: float
@@ -238,7 +260,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__right__brake__fluid_level(new_value)
+    .. xbr:event:: on_row2_wheel_right_brake_fluid_level(new_value)
 
         :param new_value: Brake fluid level as percent. 0 = Empty. 100 = Full.
         :type new_value: int
@@ -250,7 +272,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__right__brake__fluid_level_low(new_value)
+    .. xbr:event:: on_row2_wheel_right_brake_fluid_level_low(new_value)
 
         :param new_value: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
         :type new_value: bool
@@ -262,7 +284,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__right__brake__brakes_worn(new_value)
+    .. xbr:event:: on_row2_wheel_right_brake_brakes_worn(new_value)
 
         :param new_value: Brake pad wear status. True = Worn. False = Not Worn.
         :type new_value: bool
@@ -274,7 +296,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__right__brake__pad_wear(new_value)
+    .. xbr:event:: on_row2_wheel_right_brake_pad_wear(new_value)
 
         :param new_value: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
         :type new_value: int
@@ -286,7 +308,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__right__tire__pressure(new_value)
+    .. xbr:event:: on_row2_wheel_right_tire_pressure(new_value)
 
         :param new_value: Tire pressure in kilo-Pascal
         :type new_value: int
@@ -298,7 +320,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__right__tire__pressure_low(new_value)
+    .. xbr:event:: on_row2_wheel_right_tire_pressure_low(new_value)
 
         :param new_value: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
         :type new_value: bool
@@ -310,7 +332,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__right__tire__temperature(new_value)
+    .. xbr:event:: on_row2_wheel_right_tire_temperature(new_value)
 
         :param new_value: Tire temperature in Celsius.
         :type new_value: float
@@ -322,7 +344,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__left__brake__fluid_level(new_value)
+    .. xbr:event:: on_row2_wheel_left_brake_fluid_level(new_value)
 
         :param new_value: Brake fluid level as percent. 0 = Empty. 100 = Full.
         :type new_value: int
@@ -334,7 +356,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__left__brake__fluid_level_low(new_value)
+    .. xbr:event:: on_row2_wheel_left_brake_fluid_level_low(new_value)
 
         :param new_value: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
         :type new_value: bool
@@ -346,7 +368,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__left__brake__brakes_worn(new_value)
+    .. xbr:event:: on_row2_wheel_left_brake_brakes_worn(new_value)
 
         :param new_value: Brake pad wear status. True = Worn. False = Not Worn.
         :type new_value: bool
@@ -358,7 +380,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__left__brake__pad_wear(new_value)
+    .. xbr:event:: on_row2_wheel_left_brake_pad_wear(new_value)
 
         :param new_value: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
         :type new_value: int
@@ -370,7 +392,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__left__tire__pressure(new_value)
+    .. xbr:event:: on_row2_wheel_left_tire_pressure(new_value)
 
         :param new_value: Tire pressure in kilo-Pascal
         :type new_value: int
@@ -382,7 +404,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__left__tire__pressure_low(new_value)
+    .. xbr:event:: on_row2_wheel_left_tire_pressure_low(new_value)
 
         :param new_value: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
         :type new_value: bool
@@ -394,7 +416,7 @@ IAxle
         
 
 
-    .. xbr:event:: on_row2__wheel__left__tire__temperature(new_value)
+    .. xbr:event:: on_row2_wheel_left_tire_temperature(new_value)
 
         :param new_value: Tire temperature in Celsius.
         :type new_value: float
@@ -407,6 +429,8 @@ IAxle
 
 ISteeringWheel
 --------------
+
+Steering wheel signals.
 
 .. xbr:interface:: ISteeringWheel
 

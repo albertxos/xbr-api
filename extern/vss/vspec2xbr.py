@@ -35,6 +35,20 @@ NS_TMPL = """{{ title }}
 
 {{ description }}
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: {{ namespace }}
 
 """
@@ -48,6 +62,8 @@ NS_TMPL_jenv = jinja2.Environment().from_string(NS_TMPL)
 IFC_TMPL = """
 {{ title }}
 {{ title_underline }}
+
+{{ description }}.
 
 .. xbr:interface:: {{ title }}
 
@@ -83,6 +99,9 @@ URI_PREFIX = 'org.genivi.vss'
 INPUT_SPEC = './extern/vss/vss_rel_1.0.json'
 OUTPUT_DIR = './api/namespace/org/genivi/vss/'
 
+CNT_NAMESPACES = 0
+CNT_INTERFACES = 0
+CNT_EVENTS = 0
 
 data = None
 with open(INPUT_SPEC) as fd:
@@ -90,6 +109,7 @@ with open(INPUT_SPEC) as fd:
 
 nss = data['Signal']['children']
 for ns, ns_data in nss.items():
+    CNT_NAMESPACES += 1
     ns_name = ns.lower()
     ns_file = os.path.join(OUTPUT_DIR, '{}.rst'.format(ns_name))
     with open(ns_file, 'w') as ns_fd:
@@ -110,6 +130,7 @@ for ns, ns_data in nss.items():
             ifcs = {ns: {'children': ifcs}}
 
         for ifc, ifc_data in ifcs.items():
+            CNT_INTERFACES += 1
             if True:
                 #
                 # prefix all interfaces with "I"
@@ -135,12 +156,27 @@ for ns, ns_data in nss.items():
             recurse([], ifc_data, evts)
 
             for evt, evt_data in evts:
+                CNT_EVENTS += 1
 
                 #
                 # convert all event names to snake case, and prefix
                 # all events with "on_"
                 #
-                evt_name = 'on_{}'.format(stringcase.snakecase(evt))
+                ep = evt.split('.')
+
+                # FIXME: hack, otherwise stringcase.snakecase will convert
+                # ABC => a_b_c
+                if ep[-1].isupper():
+                    ep[-1] = ep[-1].lower()
+                ep = [stringcase.snakecase(x) for x in ep]
+
+                if False:
+                    ep[-1] = 'on_{}'.format(ep[-1])
+                    evt_name = '.'.join(ep)
+                else:
+                    evt_name = 'on_' + '_'.join(ep)
+
+                print(evt_name)
 
                 value_att_id = evt_data.get('id', None)
                 value_att_sensor = evt_data.get('sensor', None)
@@ -162,3 +198,13 @@ for ns, ns_data in nss.items():
                                                   value_att_sensor=value_att_sensor,
                                                   value_att_actuator=value_att_actuator)
                 ns_fd.write(rst_output)
+
+DONE = """
+
+Namespaces:   {namespaces}
+Interfaces:   {interfaces}
+Events:       {events}
+
+""".format(namespaces=CNT_NAMESPACES, interfaces=CNT_INTERFACES, events=CNT_EVENTS)
+
+print(DONE)

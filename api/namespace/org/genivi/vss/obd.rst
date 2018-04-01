@@ -3,10 +3,26 @@ org.genivi.vss.obd
 
 OBD data.
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: org.genivi.vss.obd
 
 IOBD
 ----
+
+FIXME.
 
 .. xbr:interface:: IOBD
 
@@ -73,7 +89,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor8__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor8_current(new_value)
 
         :param new_value: PID 3B - Lambda current for wide range/band oxygen sensor 8
         :type new_value: float
@@ -85,7 +101,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor8__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor8_voltage(new_value)
 
         :param new_value: PID 2B - Lambda voltage for wide range/band oxygen sensor 8
         :type new_value: float
@@ -97,7 +113,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor1__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor1_current(new_value)
 
         :param new_value: PID 34 - Lambda current for wide range/band oxygen sensor 1
         :type new_value: float
@@ -109,7 +125,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor1__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor1_voltage(new_value)
 
         :param new_value: PID 24 - Lambda voltage for wide range/band oxygen sensor 1
         :type new_value: float
@@ -121,7 +137,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor3__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor3_current(new_value)
 
         :param new_value: PID 36 - Lambda current for wide range/band oxygen sensor 4
         :type new_value: float
@@ -133,7 +149,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor3__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor3_voltage(new_value)
 
         :param new_value: PID 26 - Lambda voltage for wide range/band oxygen sensor 3
         :type new_value: float
@@ -145,7 +161,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor2__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor2_current(new_value)
 
         :param new_value: PID 35 - Lambda current for wide range/band oxygen sensor 2
         :type new_value: float
@@ -157,7 +173,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor2__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor2_voltage(new_value)
 
         :param new_value: PID 25 - Lambda voltage for wide range/band oxygen sensor 2
         :type new_value: float
@@ -169,7 +185,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor5__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor5_current(new_value)
 
         :param new_value: PID 38 - Lambda current for wide range/band oxygen sensor 5
         :type new_value: float
@@ -181,7 +197,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor5__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor5_voltage(new_value)
 
         :param new_value: PID 28 - Lambda voltage for wide range/band oxygen sensor 5
         :type new_value: float
@@ -193,7 +209,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor4__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor4_current(new_value)
 
         :param new_value: PID 37 - Lambda current for wide range/band oxygen sensor 4
         :type new_value: float
@@ -205,7 +221,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor4__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor4_voltage(new_value)
 
         :param new_value: PID 27 - Lambda voltage for wide range/band oxygen sensor 4
         :type new_value: float
@@ -217,7 +233,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor7__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor7_current(new_value)
 
         :param new_value: PID 3A - Lambda current for wide range/band oxygen sensor 7
         :type new_value: float
@@ -229,7 +245,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor7__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor7_voltage(new_value)
 
         :param new_value: PID 2A - Lambda voltage for wide range/band oxygen sensor 7
         :type new_value: float
@@ -241,7 +257,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor6__current(new_value)
+    .. xbr:event:: on_o2_w_r_sensor6_current(new_value)
 
         :param new_value: PID 39 - Lambda current for wide range/band oxygen sensor 6
         :type new_value: float
@@ -253,7 +269,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2_w_r__sensor6__voltage(new_value)
+    .. xbr:event:: on_o2_w_r_sensor6_voltage(new_value)
 
         :param new_value: PID 29 - Lambda voltage for wide range/band oxygen sensor 6
         :type new_value: float
@@ -385,7 +401,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank2__sensor1__voltage(new_value)
+    .. xbr:event:: on_o2_bank2_sensor1_voltage(new_value)
 
         :param new_value: PID 18 - Sensor voltage
         :type new_value: float
@@ -397,7 +413,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank2__sensor3__voltage(new_value)
+    .. xbr:event:: on_o2_bank2_sensor3_voltage(new_value)
 
         :param new_value: PID 1A - Sensor voltage
         :type new_value: float
@@ -409,7 +425,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank2__sensor2__voltage(new_value)
+    .. xbr:event:: on_o2_bank2_sensor2_voltage(new_value)
 
         :param new_value: PID 19 - Sensor voltage
         :type new_value: float
@@ -421,7 +437,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank2__sensor4__voltage(new_value)
+    .. xbr:event:: on_o2_bank2_sensor4_voltage(new_value)
 
         :param new_value: PID 1B - Sensor voltage
         :type new_value: float
@@ -433,7 +449,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank1__sensor1__voltage(new_value)
+    .. xbr:event:: on_o2_bank1_sensor1_voltage(new_value)
 
         :param new_value: PID 14 - Sensor voltage
         :type new_value: float
@@ -445,7 +461,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank1__sensor3__voltage(new_value)
+    .. xbr:event:: on_o2_bank1_sensor3_voltage(new_value)
 
         :param new_value: PID 16 - Sensor voltage
         :type new_value: float
@@ -457,7 +473,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank1__sensor2__voltage(new_value)
+    .. xbr:event:: on_o2_bank1_sensor2_voltage(new_value)
 
         :param new_value: PID 15 - Sensor voltage
         :type new_value: float
@@ -469,7 +485,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_o2__bank1__sensor4__voltage(new_value)
+    .. xbr:event:: on_o2_bank1_sensor4_voltage(new_value)
 
         :param new_value: PID 17 - Sensor voltage
         :type new_value: float
@@ -481,7 +497,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_status__d_t_c_count(new_value)
+    .. xbr:event:: on_status_d_t_c_count(new_value)
 
         :param new_value: Number of Diagnostic Trouble Codes (DTC)
         :type new_value: int
@@ -493,7 +509,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_status__m_i_l(new_value)
+    .. xbr:event:: on_status_mil(new_value)
 
         :param new_value: Malfunction Indicator Light (MIL) False = Off, True = On
         :type new_value: bool
@@ -637,7 +653,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_catalyst__bank2__temperature2(new_value)
+    .. xbr:event:: on_catalyst_bank2_temperature2(new_value)
 
         :param new_value: PID 3F - Catalyst temperature from bank 2, sensor 2
         :type new_value: float
@@ -649,7 +665,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_catalyst__bank2__temperature1(new_value)
+    .. xbr:event:: on_catalyst_bank2_temperature1(new_value)
 
         :param new_value: PID 3D - Catalyst temperature from bank 2, sensor 1
         :type new_value: float
@@ -661,7 +677,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_catalyst__bank1__temperature2(new_value)
+    .. xbr:event:: on_catalyst_bank1_temperature2(new_value)
 
         :param new_value: PID 3E - Catalyst temperature from bank 1, sensor 2
         :type new_value: float
@@ -673,7 +689,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_catalyst__bank1__temperature1(new_value)
+    .. xbr:event:: on_catalyst_bank1_temperature1(new_value)
 
         :param new_value: PID 3C - Catalyst temperature from bank 1, sensor 1
         :type new_value: float
@@ -913,7 +929,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_m_a_p(new_value)
+    .. xbr:event:: on_map(new_value)
 
         :param new_value: PID 0B - Intake manifold pressure
         :type new_value: float
@@ -937,7 +953,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_drive_cycle_status__d_t_c_count(new_value)
+    .. xbr:event:: on_drive_cycle_status_d_t_c_count(new_value)
 
         :param new_value: Number of Diagnostic Trouble Codes (DTC)
         :type new_value: int
@@ -949,7 +965,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_drive_cycle_status__m_i_l(new_value)
+    .. xbr:event:: on_drive_cycle_status_mil(new_value)
 
         :param new_value: Malfunction Indicator Light (MIL) - False = Off, True = On
         :type new_value: bool
@@ -1081,7 +1097,7 @@ IOBD
         
 
 
-    .. xbr:event:: on_m_a_f(new_value)
+    .. xbr:event:: on_maf(new_value)
 
         :param new_value: PID 10 - Grams of air drawn into engine per second
         :type new_value: int

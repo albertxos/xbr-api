@@ -3,17 +3,33 @@ org.genivi.vss.cabin
 
 All in-cabin components, including doors.
 
+.. note::
+
+    The XBR interface description here was auto-generated
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
+    from the
+    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    The VSS is
+    `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
+    under the Mozilla Public License 2.0, and the auto-generated files in this
+    repository should be considered derived works.
+    If you have improvements for or have found a bug in the APIs of namespace
+    ``org.genivi.vss``, please head over to
+    `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.
+
 .. xbr:namespace:: org.genivi.vss.cabin
 
 IDoor
 -----
+
+All doors, including windows and switches.
 
 .. xbr:interface:: IDoor
 
     All doors, including windows and switches
 
 
-    .. xbr:event:: on_row1__right__is_child_lock_active(new_value)
+    .. xbr:event:: on_row1_right_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -25,7 +41,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row1__right__is_locked(new_value)
+    .. xbr:event:: on_row1_right_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -37,7 +53,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row1__right__shade__position(new_value)
+    .. xbr:event:: on_row1_right_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -49,7 +65,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row1__right__shade__switch(new_value)
+    .. xbr:event:: on_row1_right_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -61,7 +77,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row1__right__window__position(new_value)
+    .. xbr:event:: on_row1_right_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -73,7 +89,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row1__right__window__switch(new_value)
+    .. xbr:event:: on_row1_right_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -85,7 +101,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row1__right__is_open(new_value)
+    .. xbr:event:: on_row1_right_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -97,7 +113,7 @@ IDoor
         :vss_actuator: Door Contact Actuator 
 
 
-    .. xbr:event:: on_row1__left__is_child_lock_active(new_value)
+    .. xbr:event:: on_row1_left_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -109,7 +125,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row1__left__is_locked(new_value)
+    .. xbr:event:: on_row1_left_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -121,7 +137,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row1__left__shade__position(new_value)
+    .. xbr:event:: on_row1_left_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -133,7 +149,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row1__left__shade__switch(new_value)
+    .. xbr:event:: on_row1_left_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -145,7 +161,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row1__left__window__position(new_value)
+    .. xbr:event:: on_row1_left_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -157,7 +173,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row1__left__window__switch(new_value)
+    .. xbr:event:: on_row1_left_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -169,7 +185,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row1__left__is_open(new_value)
+    .. xbr:event:: on_row1_left_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -181,7 +197,7 @@ IDoor
         :vss_actuator: Door Contact Actuator 
 
 
-    .. xbr:event:: on_row2__right__is_child_lock_active(new_value)
+    .. xbr:event:: on_row2_right_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -193,7 +209,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row2__right__is_locked(new_value)
+    .. xbr:event:: on_row2_right_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -205,7 +221,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row2__right__shade__position(new_value)
+    .. xbr:event:: on_row2_right_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -217,7 +233,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row2__right__shade__switch(new_value)
+    .. xbr:event:: on_row2_right_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -229,7 +245,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row2__right__window__position(new_value)
+    .. xbr:event:: on_row2_right_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -241,7 +257,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row2__right__window__switch(new_value)
+    .. xbr:event:: on_row2_right_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -253,7 +269,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row2__right__is_open(new_value)
+    .. xbr:event:: on_row2_right_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -265,7 +281,7 @@ IDoor
         :vss_actuator: Door Contact Actuator 
 
 
-    .. xbr:event:: on_row2__left__is_child_lock_active(new_value)
+    .. xbr:event:: on_row2_left_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -277,7 +293,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row2__left__is_locked(new_value)
+    .. xbr:event:: on_row2_left_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -289,7 +305,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row2__left__shade__position(new_value)
+    .. xbr:event:: on_row2_left_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -301,7 +317,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row2__left__shade__switch(new_value)
+    .. xbr:event:: on_row2_left_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -313,7 +329,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row2__left__window__position(new_value)
+    .. xbr:event:: on_row2_left_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -325,7 +341,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row2__left__window__switch(new_value)
+    .. xbr:event:: on_row2_left_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -337,7 +353,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row2__left__is_open(new_value)
+    .. xbr:event:: on_row2_left_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -349,7 +365,7 @@ IDoor
         :vss_actuator: Door Contact Actuator 
 
 
-    .. xbr:event:: on_row3__right__is_child_lock_active(new_value)
+    .. xbr:event:: on_row3_right_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -361,7 +377,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row3__right__is_locked(new_value)
+    .. xbr:event:: on_row3_right_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -373,7 +389,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row3__right__shade__position(new_value)
+    .. xbr:event:: on_row3_right_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -385,7 +401,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row3__right__shade__switch(new_value)
+    .. xbr:event:: on_row3_right_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -397,7 +413,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row3__right__window__position(new_value)
+    .. xbr:event:: on_row3_right_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -409,7 +425,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row3__right__window__switch(new_value)
+    .. xbr:event:: on_row3_right_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -421,7 +437,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row3__right__is_open(new_value)
+    .. xbr:event:: on_row3_right_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -433,7 +449,7 @@ IDoor
         :vss_actuator: Door Contact Actuator 
 
 
-    .. xbr:event:: on_row3__left__is_child_lock_active(new_value)
+    .. xbr:event:: on_row3_left_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -445,7 +461,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row3__left__is_locked(new_value)
+    .. xbr:event:: on_row3_left_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -457,7 +473,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row3__left__shade__position(new_value)
+    .. xbr:event:: on_row3_left_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -469,7 +485,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row3__left__shade__switch(new_value)
+    .. xbr:event:: on_row3_left_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -481,7 +497,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row3__left__window__position(new_value)
+    .. xbr:event:: on_row3_left_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -493,7 +509,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row3__left__window__switch(new_value)
+    .. xbr:event:: on_row3_left_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -505,7 +521,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row3__left__is_open(new_value)
+    .. xbr:event:: on_row3_left_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -517,7 +533,7 @@ IDoor
         :vss_actuator: Door Contact Actuator 
 
 
-    .. xbr:event:: on_row4__right__is_child_lock_active(new_value)
+    .. xbr:event:: on_row4_right_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -529,7 +545,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row4__right__is_locked(new_value)
+    .. xbr:event:: on_row4_right_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -541,7 +557,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row4__right__shade__position(new_value)
+    .. xbr:event:: on_row4_right_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -553,7 +569,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row4__right__shade__switch(new_value)
+    .. xbr:event:: on_row4_right_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -565,7 +581,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row4__right__window__position(new_value)
+    .. xbr:event:: on_row4_right_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -577,7 +593,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row4__right__window__switch(new_value)
+    .. xbr:event:: on_row4_right_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -589,7 +605,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row4__right__is_open(new_value)
+    .. xbr:event:: on_row4_right_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -601,7 +617,7 @@ IDoor
         :vss_actuator: Door Contact Actuator 
 
 
-    .. xbr:event:: on_row4__left__is_child_lock_active(new_value)
+    .. xbr:event:: on_row4_left_is_child_lock_active(new_value)
 
         :param new_value: Is door child lock engaged. True = Engaged. False = Disengaged.
         :type new_value: bool
@@ -613,7 +629,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row4__left__is_locked(new_value)
+    .. xbr:event:: on_row4_left_is_locked(new_value)
 
         :param new_value: Is door locked or unlocked. True = Locked. False = Unlocked.
         :type new_value: bool
@@ -625,7 +641,7 @@ IDoor
         :vss_actuator: Door Lock 
 
 
-    .. xbr:event:: on_row4__left__shade__position(new_value)
+    .. xbr:event:: on_row4_left_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -637,7 +653,7 @@ IDoor
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_row4__left__shade__switch(new_value)
+    .. xbr:event:: on_row4_left_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -649,7 +665,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row4__left__window__position(new_value)
+    .. xbr:event:: on_row4_left_window_position(new_value)
 
         :param new_value: Window position. 0 = Fully closed 100 = Fully opened.
         :type new_value: int
@@ -661,7 +677,7 @@ IDoor
         
 
 
-    .. xbr:event:: on_row4__left__window__switch(new_value)
+    .. xbr:event:: on_row4_left_window_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -673,7 +689,7 @@ IDoor
         :vss_actuator: RearShade System 
 
 
-    .. xbr:event:: on_row4__left__is_open(new_value)
+    .. xbr:event:: on_row4_left_is_open(new_value)
 
         :param new_value: Is door open or closed
         :type new_value: bool
@@ -687,12 +703,14 @@ IDoor
 IHVAC
 -----
 
+Climate control.
+
 .. xbr:interface:: IHVAC
 
     Climate control
 
 
-    .. xbr:event:: on_row1__right__fan_speed(new_value)
+    .. xbr:event:: on_row1_right_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -704,7 +722,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row1__right__temperature(new_value)
+    .. xbr:event:: on_row1_right_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -716,7 +734,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row1__right__air_distribution(new_value)
+    .. xbr:event:: on_row1_right_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -728,7 +746,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row1__left__fan_speed(new_value)
+    .. xbr:event:: on_row1_left_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -740,7 +758,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row1__left__temperature(new_value)
+    .. xbr:event:: on_row1_left_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -752,7 +770,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row1__left__air_distribution(new_value)
+    .. xbr:event:: on_row1_left_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -764,7 +782,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row2__right__fan_speed(new_value)
+    .. xbr:event:: on_row2_right_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -776,7 +794,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row2__right__temperature(new_value)
+    .. xbr:event:: on_row2_right_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -788,7 +806,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row2__right__air_distribution(new_value)
+    .. xbr:event:: on_row2_right_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -800,7 +818,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row2__left__fan_speed(new_value)
+    .. xbr:event:: on_row2_left_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -812,7 +830,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row2__left__temperature(new_value)
+    .. xbr:event:: on_row2_left_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -824,7 +842,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row2__left__air_distribution(new_value)
+    .. xbr:event:: on_row2_left_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -836,7 +854,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row3__right__fan_speed(new_value)
+    .. xbr:event:: on_row3_right_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -848,7 +866,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row3__right__temperature(new_value)
+    .. xbr:event:: on_row3_right_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -860,7 +878,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row3__right__air_distribution(new_value)
+    .. xbr:event:: on_row3_right_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -872,7 +890,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row3__left__fan_speed(new_value)
+    .. xbr:event:: on_row3_left_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -884,7 +902,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row3__left__temperature(new_value)
+    .. xbr:event:: on_row3_left_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -896,7 +914,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row3__left__air_distribution(new_value)
+    .. xbr:event:: on_row3_left_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -908,7 +926,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row4__right__fan_speed(new_value)
+    .. xbr:event:: on_row4_right_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -920,7 +938,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row4__right__temperature(new_value)
+    .. xbr:event:: on_row4_right_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -932,7 +950,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row4__right__air_distribution(new_value)
+    .. xbr:event:: on_row4_right_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -944,7 +962,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row4__left__fan_speed(new_value)
+    .. xbr:event:: on_row4_left_fan_speed(new_value)
 
         :param new_value: Fan Speed, 0 = off. 100 = max
         :type new_value: int
@@ -956,7 +974,7 @@ IHVAC
         :vss_actuator: Fan Control 
 
 
-    .. xbr:event:: on_row4__left__temperature(new_value)
+    .. xbr:event:: on_row4_left_temperature(new_value)
 
         :param new_value: Temperature
         :type new_value: int
@@ -968,7 +986,7 @@ IHVAC
         :vss_actuator: TemperatureSwitch 
 
 
-    .. xbr:event:: on_row4__left__air_distribution(new_value)
+    .. xbr:event:: on_row4_left_air_distribution(new_value)
 
         :param new_value: Direction of airstream
         :type new_value: str
@@ -1042,12 +1060,14 @@ IHVAC
 IInfotainment
 -------------
 
+Infotainment system.
+
 .. xbr:interface:: IInfotainment
 
     Infotainment system
 
 
-    .. xbr:event:: on_media__action(new_value)
+    .. xbr:event:: on_media_action(new_value)
 
         :param new_value: Tells if the media was
         :type new_value: str
@@ -1059,7 +1079,7 @@ IInfotainment
         :vss_actuator: Multimedia System 
 
 
-    .. xbr:event:: on_media__selected_u_r_i(new_value)
+    .. xbr:event:: on_media_selected_u_r_i(new_value)
 
         :param new_value: URI of suggested media that was selected
         :type new_value: str
@@ -1071,7 +1091,7 @@ IInfotainment
         :vss_actuator: Multimedia System 
 
 
-    .. xbr:event:: on_media__volume(new_value)
+    .. xbr:event:: on_media_volume(new_value)
 
         :param new_value: Current Media Volume
         :type new_value: int
@@ -1083,7 +1103,7 @@ IInfotainment
         :vss_actuator: Multimedia System 
 
 
-    .. xbr:event:: on_media__declined_u_r_i(new_value)
+    .. xbr:event:: on_media_declined_u_r_i(new_value)
 
         :param new_value: URI of suggested media that was declined
         :type new_value: str
@@ -1095,7 +1115,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_media__played__album(new_value)
+    .. xbr:event:: on_media_played_album(new_value)
 
         :param new_value: Name of album being played
         :type new_value: str
@@ -1107,7 +1127,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_media__played__source(new_value)
+    .. xbr:event:: on_media_played_source(new_value)
 
         :param new_value: Media selected for playback
         :type new_value: str
@@ -1119,7 +1139,7 @@ IInfotainment
         :vss_actuator: Multimedia System 
 
 
-    .. xbr:event:: on_media__played__track(new_value)
+    .. xbr:event:: on_media_played_track(new_value)
 
         :param new_value: Name of track being played
         :type new_value: str
@@ -1131,7 +1151,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_media__played__u_r_i(new_value)
+    .. xbr:event:: on_media_played_uri(new_value)
 
         :param new_value: User Resource associated with the media
         :type new_value: str
@@ -1143,7 +1163,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_media__played__artist(new_value)
+    .. xbr:event:: on_media_played_artist(new_value)
 
         :param new_value: Name of artist being played
         :type new_value: str
@@ -1155,7 +1175,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_navigation__current_location__altitude(new_value)
+    .. xbr:event:: on_navigation_current_location_altitude(new_value)
 
         :param new_value: Current elevation of the position in meters.
         :type new_value: float
@@ -1167,7 +1187,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_navigation__current_location__longitude(new_value)
+    .. xbr:event:: on_navigation_current_location_longitude(new_value)
 
         :param new_value: Current longitude of vehicle, as reported by GPS.
         :type new_value: float
@@ -1179,7 +1199,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_navigation__current_location__latitude(new_value)
+    .. xbr:event:: on_navigation_current_location_latitude(new_value)
 
         :param new_value: Current latitude of vehicle, as reported by GPS.
         :type new_value: float
@@ -1191,7 +1211,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_navigation__current_location__speed(new_value)
+    .. xbr:event:: on_navigation_current_location_speed(new_value)
 
         :param new_value: Vehicle speed, as sensed by the GPS receiver.
         :type new_value: int
@@ -1203,7 +1223,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_navigation__current_location__heading(new_value)
+    .. xbr:event:: on_navigation_current_location_heading(new_value)
 
         :param new_value: Current magnetic compass heading, in degrees.
         :type new_value: float
@@ -1215,7 +1235,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_navigation__current_location__accuracy(new_value)
+    .. xbr:event:: on_navigation_current_location_accuracy(new_value)
 
         :param new_value: Accuracy level of the latitude and longitude coordinates in meters.
         :type new_value: float
@@ -1227,7 +1247,7 @@ IInfotainment
         
 
 
-    .. xbr:event:: on_navigation__destination_set__latitude(new_value)
+    .. xbr:event:: on_navigation_destination_set_latitude(new_value)
 
         :param new_value: Latitude of destination
         :type new_value: float
@@ -1239,7 +1259,7 @@ IInfotainment
         :vss_actuator: GPS 
 
 
-    .. xbr:event:: on_navigation__destination_set__longitude(new_value)
+    .. xbr:event:: on_navigation_destination_set_longitude(new_value)
 
         :param new_value: Longitude of destination
         :type new_value: float
@@ -1252,6 +1272,8 @@ IInfotainment
 
 ISunroof
 --------
+
+Sun roof status..
 
 .. xbr:interface:: ISunroof
 
@@ -1282,7 +1304,7 @@ ISunroof
         :vss_actuator: Sunroof Position Actuator 
 
 
-    .. xbr:event:: on_shade__position(new_value)
+    .. xbr:event:: on_shade_position(new_value)
 
         :param new_value: Position of side window blind. 0 = Fully retracted. 100 = Fully deployed.
         :type new_value: int
@@ -1294,7 +1316,7 @@ ISunroof
         :vss_actuator: RearShade Actuator 
 
 
-    .. xbr:event:: on_shade__switch(new_value)
+    .. xbr:event:: on_shade_switch(new_value)
 
         :param new_value: Switch controlling sliding action such as window, sunroof, or blind.
         :type new_value: str
@@ -1308,12 +1330,14 @@ ISunroof
 ISeat
 -----
 
+All seats..
+
 .. xbr:interface:: ISeat
 
     All seats.
 
 
-    .. xbr:event:: on_row1__pos4__head_restraint__height(new_value)
+    .. xbr:event:: on_row1_pos4_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -1325,7 +1349,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__recline(new_value)
+    .. xbr:event:: on_row1_pos4_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -1337,7 +1361,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__has_passenger(new_value)
+    .. xbr:event:: on_row1_pos4_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -1349,7 +1373,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__heating(new_value)
+    .. xbr:event:: on_row1_pos4_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -1361,7 +1385,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__lumbar__inflation(new_value)
+    .. xbr:event:: on_row1_pos4_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -1373,7 +1397,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__lumbar__height(new_value)
+    .. xbr:event:: on_row1_pos4_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -1385,7 +1409,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row1_pos4_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -1397,7 +1421,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row1_pos4_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -1409,7 +1433,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row1_pos4_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -1421,7 +1445,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__cooler(new_value)
+    .. xbr:event:: on_row1_pos4_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -1433,7 +1457,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row1__pos4__switch__recline__forward(new_value)
+    .. xbr:event:: on_row1_pos4_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -1445,7 +1469,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__recline__backward(new_value)
+    .. xbr:event:: on_row1_pos4_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -1457,7 +1481,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__up(new_value)
+    .. xbr:event:: on_row1_pos4_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -1469,7 +1493,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row1_pos4_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -1481,7 +1505,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row1_pos4_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -1493,7 +1517,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row1_pos4_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -1505,7 +1529,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row1_pos4_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -1517,7 +1541,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__down(new_value)
+    .. xbr:event:: on_row1_pos4_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -1529,7 +1553,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__warmer(new_value)
+    .. xbr:event:: on_row1_pos4_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -1541,7 +1565,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row1__pos4__switch__cushion__down(new_value)
+    .. xbr:event:: on_row1_pos4_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -1553,7 +1577,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row1_pos4_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -1565,7 +1589,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row1_pos4_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -1577,7 +1601,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__cushion__up(new_value)
+    .. xbr:event:: on_row1_pos4_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -1589,7 +1613,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__forward(new_value)
+    .. xbr:event:: on_row1_pos4_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -1601,7 +1625,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__backward(new_value)
+    .. xbr:event:: on_row1_pos4_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -1613,7 +1637,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__massage__increase(new_value)
+    .. xbr:event:: on_row1_pos4_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -1625,7 +1649,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos4__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row1_pos4_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -1637,7 +1661,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos4__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row1_pos4_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -1649,7 +1673,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row1_pos4_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -1661,7 +1685,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos4__cushion__length(new_value)
+    .. xbr:event:: on_row1_pos4_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -1673,7 +1697,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__cushion__height(new_value)
+    .. xbr:event:: on_row1_pos4_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -1685,7 +1709,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__is_belted(new_value)
+    .. xbr:event:: on_row1_pos4_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -1697,7 +1721,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__position(new_value)
+    .. xbr:event:: on_row1_pos4_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -1709,7 +1733,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row1_pos4_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -1721,7 +1745,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos4__massage(new_value)
+    .. xbr:event:: on_row1_pos4_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -1733,7 +1757,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__head_restraint__height(new_value)
+    .. xbr:event:: on_row1_pos5_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -1745,7 +1769,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__recline(new_value)
+    .. xbr:event:: on_row1_pos5_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -1757,7 +1781,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__has_passenger(new_value)
+    .. xbr:event:: on_row1_pos5_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -1769,7 +1793,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__heating(new_value)
+    .. xbr:event:: on_row1_pos5_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -1781,7 +1805,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__lumbar__inflation(new_value)
+    .. xbr:event:: on_row1_pos5_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -1793,7 +1817,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__lumbar__height(new_value)
+    .. xbr:event:: on_row1_pos5_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -1805,7 +1829,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row1_pos5_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -1817,7 +1841,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row1_pos5_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -1829,7 +1853,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row1_pos5_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -1841,7 +1865,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__cooler(new_value)
+    .. xbr:event:: on_row1_pos5_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -1853,7 +1877,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row1__pos5__switch__recline__forward(new_value)
+    .. xbr:event:: on_row1_pos5_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -1865,7 +1889,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__recline__backward(new_value)
+    .. xbr:event:: on_row1_pos5_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -1877,7 +1901,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__up(new_value)
+    .. xbr:event:: on_row1_pos5_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -1889,7 +1913,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row1_pos5_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -1901,7 +1925,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row1_pos5_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -1913,7 +1937,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row1_pos5_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -1925,7 +1949,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row1_pos5_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -1937,7 +1961,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__down(new_value)
+    .. xbr:event:: on_row1_pos5_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -1949,7 +1973,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__warmer(new_value)
+    .. xbr:event:: on_row1_pos5_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -1961,7 +1985,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row1__pos5__switch__cushion__down(new_value)
+    .. xbr:event:: on_row1_pos5_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -1973,7 +1997,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row1_pos5_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -1985,7 +2009,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row1_pos5_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -1997,7 +2021,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__cushion__up(new_value)
+    .. xbr:event:: on_row1_pos5_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -2009,7 +2033,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__forward(new_value)
+    .. xbr:event:: on_row1_pos5_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -2021,7 +2045,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__backward(new_value)
+    .. xbr:event:: on_row1_pos5_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -2033,7 +2057,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__massage__increase(new_value)
+    .. xbr:event:: on_row1_pos5_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -2045,7 +2069,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos5__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row1_pos5_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -2057,7 +2081,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos5__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row1_pos5_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -2069,7 +2093,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row1_pos5_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -2081,7 +2105,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos5__cushion__length(new_value)
+    .. xbr:event:: on_row1_pos5_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -2093,7 +2117,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__cushion__height(new_value)
+    .. xbr:event:: on_row1_pos5_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -2105,7 +2129,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__is_belted(new_value)
+    .. xbr:event:: on_row1_pos5_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -2117,7 +2141,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__position(new_value)
+    .. xbr:event:: on_row1_pos5_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -2129,7 +2153,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row1_pos5_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -2141,7 +2165,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos5__massage(new_value)
+    .. xbr:event:: on_row1_pos5_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -2153,7 +2177,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__head_restraint__height(new_value)
+    .. xbr:event:: on_row1_pos2_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -2165,7 +2189,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__recline(new_value)
+    .. xbr:event:: on_row1_pos2_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -2177,7 +2201,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__has_passenger(new_value)
+    .. xbr:event:: on_row1_pos2_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -2189,7 +2213,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__heating(new_value)
+    .. xbr:event:: on_row1_pos2_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -2201,7 +2225,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__lumbar__inflation(new_value)
+    .. xbr:event:: on_row1_pos2_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -2213,7 +2237,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__lumbar__height(new_value)
+    .. xbr:event:: on_row1_pos2_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -2225,7 +2249,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row1_pos2_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -2237,7 +2261,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row1_pos2_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -2249,7 +2273,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row1_pos2_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -2261,7 +2285,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__cooler(new_value)
+    .. xbr:event:: on_row1_pos2_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -2273,7 +2297,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row1__pos2__switch__recline__forward(new_value)
+    .. xbr:event:: on_row1_pos2_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -2285,7 +2309,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__recline__backward(new_value)
+    .. xbr:event:: on_row1_pos2_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -2297,7 +2321,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__up(new_value)
+    .. xbr:event:: on_row1_pos2_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -2309,7 +2333,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row1_pos2_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -2321,7 +2345,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row1_pos2_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -2333,7 +2357,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row1_pos2_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -2345,7 +2369,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row1_pos2_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -2357,7 +2381,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__down(new_value)
+    .. xbr:event:: on_row1_pos2_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -2369,7 +2393,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__warmer(new_value)
+    .. xbr:event:: on_row1_pos2_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -2381,7 +2405,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row1__pos2__switch__cushion__down(new_value)
+    .. xbr:event:: on_row1_pos2_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -2393,7 +2417,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row1_pos2_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -2405,7 +2429,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row1_pos2_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -2417,7 +2441,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__cushion__up(new_value)
+    .. xbr:event:: on_row1_pos2_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -2429,7 +2453,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__forward(new_value)
+    .. xbr:event:: on_row1_pos2_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -2441,7 +2465,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__backward(new_value)
+    .. xbr:event:: on_row1_pos2_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -2453,7 +2477,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__massage__increase(new_value)
+    .. xbr:event:: on_row1_pos2_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -2465,7 +2489,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos2__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row1_pos2_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -2477,7 +2501,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos2__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row1_pos2_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -2489,7 +2513,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row1_pos2_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -2501,7 +2525,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos2__cushion__length(new_value)
+    .. xbr:event:: on_row1_pos2_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -2513,7 +2537,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__cushion__height(new_value)
+    .. xbr:event:: on_row1_pos2_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -2525,7 +2549,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__is_belted(new_value)
+    .. xbr:event:: on_row1_pos2_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -2537,7 +2561,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__position(new_value)
+    .. xbr:event:: on_row1_pos2_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -2549,7 +2573,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row1_pos2_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -2561,7 +2585,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos2__massage(new_value)
+    .. xbr:event:: on_row1_pos2_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -2573,7 +2597,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__head_restraint__height(new_value)
+    .. xbr:event:: on_row1_pos3_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -2585,7 +2609,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__recline(new_value)
+    .. xbr:event:: on_row1_pos3_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -2597,7 +2621,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__has_passenger(new_value)
+    .. xbr:event:: on_row1_pos3_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -2609,7 +2633,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__heating(new_value)
+    .. xbr:event:: on_row1_pos3_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -2621,7 +2645,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__lumbar__inflation(new_value)
+    .. xbr:event:: on_row1_pos3_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -2633,7 +2657,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__lumbar__height(new_value)
+    .. xbr:event:: on_row1_pos3_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -2645,7 +2669,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row1_pos3_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -2657,7 +2681,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row1_pos3_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -2669,7 +2693,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row1_pos3_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -2681,7 +2705,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__cooler(new_value)
+    .. xbr:event:: on_row1_pos3_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -2693,7 +2717,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row1__pos3__switch__recline__forward(new_value)
+    .. xbr:event:: on_row1_pos3_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -2705,7 +2729,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__recline__backward(new_value)
+    .. xbr:event:: on_row1_pos3_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -2717,7 +2741,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__up(new_value)
+    .. xbr:event:: on_row1_pos3_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -2729,7 +2753,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row1_pos3_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -2741,7 +2765,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row1_pos3_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -2753,7 +2777,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row1_pos3_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -2765,7 +2789,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row1_pos3_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -2777,7 +2801,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__down(new_value)
+    .. xbr:event:: on_row1_pos3_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -2789,7 +2813,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__warmer(new_value)
+    .. xbr:event:: on_row1_pos3_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -2801,7 +2825,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row1__pos3__switch__cushion__down(new_value)
+    .. xbr:event:: on_row1_pos3_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -2813,7 +2837,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row1_pos3_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -2825,7 +2849,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row1_pos3_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -2837,7 +2861,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__cushion__up(new_value)
+    .. xbr:event:: on_row1_pos3_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -2849,7 +2873,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__forward(new_value)
+    .. xbr:event:: on_row1_pos3_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -2861,7 +2885,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__backward(new_value)
+    .. xbr:event:: on_row1_pos3_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -2873,7 +2897,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__massage__increase(new_value)
+    .. xbr:event:: on_row1_pos3_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -2885,7 +2909,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos3__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row1_pos3_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -2897,7 +2921,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos3__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row1_pos3_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -2909,7 +2933,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row1_pos3_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -2921,7 +2945,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos3__cushion__length(new_value)
+    .. xbr:event:: on_row1_pos3_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -2933,7 +2957,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__cushion__height(new_value)
+    .. xbr:event:: on_row1_pos3_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -2945,7 +2969,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__is_belted(new_value)
+    .. xbr:event:: on_row1_pos3_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -2957,7 +2981,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__position(new_value)
+    .. xbr:event:: on_row1_pos3_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -2969,7 +2993,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row1_pos3_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -2981,7 +3005,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos3__massage(new_value)
+    .. xbr:event:: on_row1_pos3_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -2993,7 +3017,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__head_restraint__height(new_value)
+    .. xbr:event:: on_row1_pos1_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -3005,7 +3029,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__recline(new_value)
+    .. xbr:event:: on_row1_pos1_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -3017,7 +3041,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__has_passenger(new_value)
+    .. xbr:event:: on_row1_pos1_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -3029,7 +3053,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__heating(new_value)
+    .. xbr:event:: on_row1_pos1_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -3041,7 +3065,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__lumbar__inflation(new_value)
+    .. xbr:event:: on_row1_pos1_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -3053,7 +3077,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__lumbar__height(new_value)
+    .. xbr:event:: on_row1_pos1_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -3065,7 +3089,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row1_pos1_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -3077,7 +3101,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row1_pos1_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -3089,7 +3113,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row1_pos1_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -3101,7 +3125,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__cooler(new_value)
+    .. xbr:event:: on_row1_pos1_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -3113,7 +3137,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row1__pos1__switch__recline__forward(new_value)
+    .. xbr:event:: on_row1_pos1_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -3125,7 +3149,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__recline__backward(new_value)
+    .. xbr:event:: on_row1_pos1_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -3137,7 +3161,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__up(new_value)
+    .. xbr:event:: on_row1_pos1_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -3149,7 +3173,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row1_pos1_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -3161,7 +3185,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row1_pos1_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -3173,7 +3197,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row1_pos1_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -3185,7 +3209,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row1_pos1_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -3197,7 +3221,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__down(new_value)
+    .. xbr:event:: on_row1_pos1_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -3209,7 +3233,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__warmer(new_value)
+    .. xbr:event:: on_row1_pos1_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -3221,7 +3245,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row1__pos1__switch__cushion__down(new_value)
+    .. xbr:event:: on_row1_pos1_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -3233,7 +3257,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row1_pos1_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -3245,7 +3269,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row1_pos1_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -3257,7 +3281,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__cushion__up(new_value)
+    .. xbr:event:: on_row1_pos1_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -3269,7 +3293,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__forward(new_value)
+    .. xbr:event:: on_row1_pos1_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -3281,7 +3305,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__backward(new_value)
+    .. xbr:event:: on_row1_pos1_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -3293,7 +3317,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__massage__increase(new_value)
+    .. xbr:event:: on_row1_pos1_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -3305,7 +3329,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos1__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row1_pos1_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -3317,7 +3341,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row1__pos1__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row1_pos1_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -3329,7 +3353,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row1_pos1_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -3341,7 +3365,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row1__pos1__cushion__length(new_value)
+    .. xbr:event:: on_row1_pos1_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -3353,7 +3377,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__cushion__height(new_value)
+    .. xbr:event:: on_row1_pos1_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -3365,7 +3389,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__is_belted(new_value)
+    .. xbr:event:: on_row1_pos1_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -3377,7 +3401,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__position(new_value)
+    .. xbr:event:: on_row1_pos1_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -3389,7 +3413,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row1_pos1_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -3401,7 +3425,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row1__pos1__massage(new_value)
+    .. xbr:event:: on_row1_pos1_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -3413,7 +3437,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__head_restraint__height(new_value)
+    .. xbr:event:: on_row2_pos4_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -3425,7 +3449,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__recline(new_value)
+    .. xbr:event:: on_row2_pos4_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -3437,7 +3461,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__has_passenger(new_value)
+    .. xbr:event:: on_row2_pos4_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -3449,7 +3473,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__heating(new_value)
+    .. xbr:event:: on_row2_pos4_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -3461,7 +3485,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__lumbar__inflation(new_value)
+    .. xbr:event:: on_row2_pos4_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -3473,7 +3497,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__lumbar__height(new_value)
+    .. xbr:event:: on_row2_pos4_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -3485,7 +3509,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row2_pos4_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -3497,7 +3521,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row2_pos4_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -3509,7 +3533,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row2_pos4_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -3521,7 +3545,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__cooler(new_value)
+    .. xbr:event:: on_row2_pos4_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -3533,7 +3557,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row2__pos4__switch__recline__forward(new_value)
+    .. xbr:event:: on_row2_pos4_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -3545,7 +3569,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__recline__backward(new_value)
+    .. xbr:event:: on_row2_pos4_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -3557,7 +3581,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__up(new_value)
+    .. xbr:event:: on_row2_pos4_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -3569,7 +3593,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row2_pos4_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -3581,7 +3605,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row2_pos4_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -3593,7 +3617,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row2_pos4_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -3605,7 +3629,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row2_pos4_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -3617,7 +3641,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__down(new_value)
+    .. xbr:event:: on_row2_pos4_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -3629,7 +3653,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__warmer(new_value)
+    .. xbr:event:: on_row2_pos4_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -3641,7 +3665,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row2__pos4__switch__cushion__down(new_value)
+    .. xbr:event:: on_row2_pos4_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -3653,7 +3677,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row2_pos4_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -3665,7 +3689,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row2_pos4_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -3677,7 +3701,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__cushion__up(new_value)
+    .. xbr:event:: on_row2_pos4_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -3689,7 +3713,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__forward(new_value)
+    .. xbr:event:: on_row2_pos4_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -3701,7 +3725,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__backward(new_value)
+    .. xbr:event:: on_row2_pos4_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -3713,7 +3737,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__massage__increase(new_value)
+    .. xbr:event:: on_row2_pos4_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -3725,7 +3749,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos4__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row2_pos4_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -3737,7 +3761,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos4__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row2_pos4_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -3749,7 +3773,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row2_pos4_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -3761,7 +3785,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos4__cushion__length(new_value)
+    .. xbr:event:: on_row2_pos4_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -3773,7 +3797,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__cushion__height(new_value)
+    .. xbr:event:: on_row2_pos4_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -3785,7 +3809,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__is_belted(new_value)
+    .. xbr:event:: on_row2_pos4_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -3797,7 +3821,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__position(new_value)
+    .. xbr:event:: on_row2_pos4_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -3809,7 +3833,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row2_pos4_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -3821,7 +3845,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos4__massage(new_value)
+    .. xbr:event:: on_row2_pos4_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -3833,7 +3857,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__head_restraint__height(new_value)
+    .. xbr:event:: on_row2_pos5_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -3845,7 +3869,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__recline(new_value)
+    .. xbr:event:: on_row2_pos5_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -3857,7 +3881,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__has_passenger(new_value)
+    .. xbr:event:: on_row2_pos5_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -3869,7 +3893,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__heating(new_value)
+    .. xbr:event:: on_row2_pos5_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -3881,7 +3905,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__lumbar__inflation(new_value)
+    .. xbr:event:: on_row2_pos5_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -3893,7 +3917,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__lumbar__height(new_value)
+    .. xbr:event:: on_row2_pos5_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -3905,7 +3929,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row2_pos5_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -3917,7 +3941,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row2_pos5_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -3929,7 +3953,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row2_pos5_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -3941,7 +3965,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__cooler(new_value)
+    .. xbr:event:: on_row2_pos5_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -3953,7 +3977,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row2__pos5__switch__recline__forward(new_value)
+    .. xbr:event:: on_row2_pos5_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -3965,7 +3989,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__recline__backward(new_value)
+    .. xbr:event:: on_row2_pos5_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -3977,7 +4001,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__up(new_value)
+    .. xbr:event:: on_row2_pos5_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -3989,7 +4013,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row2_pos5_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -4001,7 +4025,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row2_pos5_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -4013,7 +4037,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row2_pos5_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -4025,7 +4049,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row2_pos5_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -4037,7 +4061,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__down(new_value)
+    .. xbr:event:: on_row2_pos5_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -4049,7 +4073,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__warmer(new_value)
+    .. xbr:event:: on_row2_pos5_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -4061,7 +4085,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row2__pos5__switch__cushion__down(new_value)
+    .. xbr:event:: on_row2_pos5_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -4073,7 +4097,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row2_pos5_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -4085,7 +4109,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row2_pos5_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -4097,7 +4121,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__cushion__up(new_value)
+    .. xbr:event:: on_row2_pos5_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -4109,7 +4133,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__forward(new_value)
+    .. xbr:event:: on_row2_pos5_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -4121,7 +4145,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__backward(new_value)
+    .. xbr:event:: on_row2_pos5_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -4133,7 +4157,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__massage__increase(new_value)
+    .. xbr:event:: on_row2_pos5_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -4145,7 +4169,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos5__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row2_pos5_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -4157,7 +4181,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos5__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row2_pos5_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -4169,7 +4193,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row2_pos5_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -4181,7 +4205,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos5__cushion__length(new_value)
+    .. xbr:event:: on_row2_pos5_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -4193,7 +4217,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__cushion__height(new_value)
+    .. xbr:event:: on_row2_pos5_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -4205,7 +4229,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__is_belted(new_value)
+    .. xbr:event:: on_row2_pos5_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -4217,7 +4241,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__position(new_value)
+    .. xbr:event:: on_row2_pos5_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -4229,7 +4253,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row2_pos5_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -4241,7 +4265,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos5__massage(new_value)
+    .. xbr:event:: on_row2_pos5_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -4253,7 +4277,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__head_restraint__height(new_value)
+    .. xbr:event:: on_row2_pos2_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -4265,7 +4289,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__recline(new_value)
+    .. xbr:event:: on_row2_pos2_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -4277,7 +4301,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__has_passenger(new_value)
+    .. xbr:event:: on_row2_pos2_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -4289,7 +4313,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__heating(new_value)
+    .. xbr:event:: on_row2_pos2_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -4301,7 +4325,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__lumbar__inflation(new_value)
+    .. xbr:event:: on_row2_pos2_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -4313,7 +4337,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__lumbar__height(new_value)
+    .. xbr:event:: on_row2_pos2_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -4325,7 +4349,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row2_pos2_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -4337,7 +4361,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row2_pos2_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -4349,7 +4373,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row2_pos2_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -4361,7 +4385,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__cooler(new_value)
+    .. xbr:event:: on_row2_pos2_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -4373,7 +4397,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row2__pos2__switch__recline__forward(new_value)
+    .. xbr:event:: on_row2_pos2_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -4385,7 +4409,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__recline__backward(new_value)
+    .. xbr:event:: on_row2_pos2_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -4397,7 +4421,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__up(new_value)
+    .. xbr:event:: on_row2_pos2_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -4409,7 +4433,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row2_pos2_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -4421,7 +4445,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row2_pos2_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -4433,7 +4457,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row2_pos2_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -4445,7 +4469,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row2_pos2_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -4457,7 +4481,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__down(new_value)
+    .. xbr:event:: on_row2_pos2_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -4469,7 +4493,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__warmer(new_value)
+    .. xbr:event:: on_row2_pos2_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -4481,7 +4505,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row2__pos2__switch__cushion__down(new_value)
+    .. xbr:event:: on_row2_pos2_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -4493,7 +4517,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row2_pos2_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -4505,7 +4529,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row2_pos2_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -4517,7 +4541,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__cushion__up(new_value)
+    .. xbr:event:: on_row2_pos2_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -4529,7 +4553,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__forward(new_value)
+    .. xbr:event:: on_row2_pos2_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -4541,7 +4565,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__backward(new_value)
+    .. xbr:event:: on_row2_pos2_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -4553,7 +4577,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__massage__increase(new_value)
+    .. xbr:event:: on_row2_pos2_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -4565,7 +4589,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos2__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row2_pos2_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -4577,7 +4601,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos2__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row2_pos2_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -4589,7 +4613,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row2_pos2_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -4601,7 +4625,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos2__cushion__length(new_value)
+    .. xbr:event:: on_row2_pos2_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -4613,7 +4637,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__cushion__height(new_value)
+    .. xbr:event:: on_row2_pos2_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -4625,7 +4649,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__is_belted(new_value)
+    .. xbr:event:: on_row2_pos2_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -4637,7 +4661,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__position(new_value)
+    .. xbr:event:: on_row2_pos2_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -4649,7 +4673,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row2_pos2_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -4661,7 +4685,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos2__massage(new_value)
+    .. xbr:event:: on_row2_pos2_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -4673,7 +4697,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__head_restraint__height(new_value)
+    .. xbr:event:: on_row2_pos3_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -4685,7 +4709,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__recline(new_value)
+    .. xbr:event:: on_row2_pos3_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -4697,7 +4721,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__has_passenger(new_value)
+    .. xbr:event:: on_row2_pos3_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -4709,7 +4733,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__heating(new_value)
+    .. xbr:event:: on_row2_pos3_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -4721,7 +4745,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__lumbar__inflation(new_value)
+    .. xbr:event:: on_row2_pos3_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -4733,7 +4757,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__lumbar__height(new_value)
+    .. xbr:event:: on_row2_pos3_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -4745,7 +4769,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row2_pos3_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -4757,7 +4781,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row2_pos3_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -4769,7 +4793,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row2_pos3_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -4781,7 +4805,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__cooler(new_value)
+    .. xbr:event:: on_row2_pos3_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -4793,7 +4817,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row2__pos3__switch__recline__forward(new_value)
+    .. xbr:event:: on_row2_pos3_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -4805,7 +4829,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__recline__backward(new_value)
+    .. xbr:event:: on_row2_pos3_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -4817,7 +4841,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__up(new_value)
+    .. xbr:event:: on_row2_pos3_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -4829,7 +4853,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row2_pos3_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -4841,7 +4865,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row2_pos3_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -4853,7 +4877,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row2_pos3_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -4865,7 +4889,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row2_pos3_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -4877,7 +4901,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__down(new_value)
+    .. xbr:event:: on_row2_pos3_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -4889,7 +4913,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__warmer(new_value)
+    .. xbr:event:: on_row2_pos3_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -4901,7 +4925,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row2__pos3__switch__cushion__down(new_value)
+    .. xbr:event:: on_row2_pos3_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -4913,7 +4937,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row2_pos3_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -4925,7 +4949,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row2_pos3_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -4937,7 +4961,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__cushion__up(new_value)
+    .. xbr:event:: on_row2_pos3_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -4949,7 +4973,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__forward(new_value)
+    .. xbr:event:: on_row2_pos3_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -4961,7 +4985,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__backward(new_value)
+    .. xbr:event:: on_row2_pos3_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -4973,7 +4997,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__massage__increase(new_value)
+    .. xbr:event:: on_row2_pos3_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -4985,7 +5009,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos3__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row2_pos3_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -4997,7 +5021,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos3__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row2_pos3_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -5009,7 +5033,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row2_pos3_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -5021,7 +5045,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos3__cushion__length(new_value)
+    .. xbr:event:: on_row2_pos3_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -5033,7 +5057,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__cushion__height(new_value)
+    .. xbr:event:: on_row2_pos3_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -5045,7 +5069,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__is_belted(new_value)
+    .. xbr:event:: on_row2_pos3_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -5057,7 +5081,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__position(new_value)
+    .. xbr:event:: on_row2_pos3_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -5069,7 +5093,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row2_pos3_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -5081,7 +5105,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos3__massage(new_value)
+    .. xbr:event:: on_row2_pos3_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -5093,7 +5117,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__head_restraint__height(new_value)
+    .. xbr:event:: on_row2_pos1_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -5105,7 +5129,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__recline(new_value)
+    .. xbr:event:: on_row2_pos1_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -5117,7 +5141,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__has_passenger(new_value)
+    .. xbr:event:: on_row2_pos1_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -5129,7 +5153,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__heating(new_value)
+    .. xbr:event:: on_row2_pos1_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -5141,7 +5165,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__lumbar__inflation(new_value)
+    .. xbr:event:: on_row2_pos1_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -5153,7 +5177,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__lumbar__height(new_value)
+    .. xbr:event:: on_row2_pos1_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -5165,7 +5189,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row2_pos1_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -5177,7 +5201,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row2_pos1_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -5189,7 +5213,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row2_pos1_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -5201,7 +5225,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__cooler(new_value)
+    .. xbr:event:: on_row2_pos1_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -5213,7 +5237,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row2__pos1__switch__recline__forward(new_value)
+    .. xbr:event:: on_row2_pos1_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -5225,7 +5249,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__recline__backward(new_value)
+    .. xbr:event:: on_row2_pos1_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -5237,7 +5261,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__up(new_value)
+    .. xbr:event:: on_row2_pos1_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -5249,7 +5273,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row2_pos1_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -5261,7 +5285,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row2_pos1_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -5273,7 +5297,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row2_pos1_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -5285,7 +5309,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row2_pos1_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -5297,7 +5321,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__down(new_value)
+    .. xbr:event:: on_row2_pos1_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -5309,7 +5333,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__warmer(new_value)
+    .. xbr:event:: on_row2_pos1_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -5321,7 +5345,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row2__pos1__switch__cushion__down(new_value)
+    .. xbr:event:: on_row2_pos1_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -5333,7 +5357,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row2_pos1_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -5345,7 +5369,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row2_pos1_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -5357,7 +5381,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__cushion__up(new_value)
+    .. xbr:event:: on_row2_pos1_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -5369,7 +5393,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__forward(new_value)
+    .. xbr:event:: on_row2_pos1_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -5381,7 +5405,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__backward(new_value)
+    .. xbr:event:: on_row2_pos1_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -5393,7 +5417,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__massage__increase(new_value)
+    .. xbr:event:: on_row2_pos1_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -5405,7 +5429,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos1__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row2_pos1_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -5417,7 +5441,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row2__pos1__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row2_pos1_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -5429,7 +5453,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row2_pos1_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -5441,7 +5465,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row2__pos1__cushion__length(new_value)
+    .. xbr:event:: on_row2_pos1_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -5453,7 +5477,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__cushion__height(new_value)
+    .. xbr:event:: on_row2_pos1_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -5465,7 +5489,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__is_belted(new_value)
+    .. xbr:event:: on_row2_pos1_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -5477,7 +5501,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__position(new_value)
+    .. xbr:event:: on_row2_pos1_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -5489,7 +5513,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row2_pos1_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -5501,7 +5525,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row2__pos1__massage(new_value)
+    .. xbr:event:: on_row2_pos1_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -5513,7 +5537,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__head_restraint__height(new_value)
+    .. xbr:event:: on_row3_pos4_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -5525,7 +5549,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__recline(new_value)
+    .. xbr:event:: on_row3_pos4_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -5537,7 +5561,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__has_passenger(new_value)
+    .. xbr:event:: on_row3_pos4_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -5549,7 +5573,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__heating(new_value)
+    .. xbr:event:: on_row3_pos4_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -5561,7 +5585,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__lumbar__inflation(new_value)
+    .. xbr:event:: on_row3_pos4_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -5573,7 +5597,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__lumbar__height(new_value)
+    .. xbr:event:: on_row3_pos4_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -5585,7 +5609,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row3_pos4_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -5597,7 +5621,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row3_pos4_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -5609,7 +5633,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row3_pos4_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -5621,7 +5645,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__cooler(new_value)
+    .. xbr:event:: on_row3_pos4_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -5633,7 +5657,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row3__pos4__switch__recline__forward(new_value)
+    .. xbr:event:: on_row3_pos4_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -5645,7 +5669,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__recline__backward(new_value)
+    .. xbr:event:: on_row3_pos4_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -5657,7 +5681,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__up(new_value)
+    .. xbr:event:: on_row3_pos4_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -5669,7 +5693,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row3_pos4_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -5681,7 +5705,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row3_pos4_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -5693,7 +5717,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row3_pos4_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -5705,7 +5729,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row3_pos4_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -5717,7 +5741,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__down(new_value)
+    .. xbr:event:: on_row3_pos4_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -5729,7 +5753,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__warmer(new_value)
+    .. xbr:event:: on_row3_pos4_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -5741,7 +5765,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row3__pos4__switch__cushion__down(new_value)
+    .. xbr:event:: on_row3_pos4_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -5753,7 +5777,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row3_pos4_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -5765,7 +5789,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row3_pos4_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -5777,7 +5801,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__cushion__up(new_value)
+    .. xbr:event:: on_row3_pos4_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -5789,7 +5813,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__forward(new_value)
+    .. xbr:event:: on_row3_pos4_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -5801,7 +5825,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__backward(new_value)
+    .. xbr:event:: on_row3_pos4_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -5813,7 +5837,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__massage__increase(new_value)
+    .. xbr:event:: on_row3_pos4_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -5825,7 +5849,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos4__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row3_pos4_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -5837,7 +5861,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos4__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row3_pos4_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -5849,7 +5873,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row3_pos4_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -5861,7 +5885,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos4__cushion__length(new_value)
+    .. xbr:event:: on_row3_pos4_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -5873,7 +5897,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__cushion__height(new_value)
+    .. xbr:event:: on_row3_pos4_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -5885,7 +5909,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__is_belted(new_value)
+    .. xbr:event:: on_row3_pos4_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -5897,7 +5921,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__position(new_value)
+    .. xbr:event:: on_row3_pos4_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -5909,7 +5933,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row3_pos4_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -5921,7 +5945,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos4__massage(new_value)
+    .. xbr:event:: on_row3_pos4_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -5933,7 +5957,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__head_restraint__height(new_value)
+    .. xbr:event:: on_row3_pos5_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -5945,7 +5969,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__recline(new_value)
+    .. xbr:event:: on_row3_pos5_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -5957,7 +5981,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__has_passenger(new_value)
+    .. xbr:event:: on_row3_pos5_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -5969,7 +5993,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__heating(new_value)
+    .. xbr:event:: on_row3_pos5_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -5981,7 +6005,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__lumbar__inflation(new_value)
+    .. xbr:event:: on_row3_pos5_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -5993,7 +6017,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__lumbar__height(new_value)
+    .. xbr:event:: on_row3_pos5_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -6005,7 +6029,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row3_pos5_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -6017,7 +6041,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row3_pos5_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -6029,7 +6053,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row3_pos5_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -6041,7 +6065,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__cooler(new_value)
+    .. xbr:event:: on_row3_pos5_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -6053,7 +6077,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row3__pos5__switch__recline__forward(new_value)
+    .. xbr:event:: on_row3_pos5_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -6065,7 +6089,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__recline__backward(new_value)
+    .. xbr:event:: on_row3_pos5_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -6077,7 +6101,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__up(new_value)
+    .. xbr:event:: on_row3_pos5_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -6089,7 +6113,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row3_pos5_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -6101,7 +6125,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row3_pos5_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -6113,7 +6137,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row3_pos5_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -6125,7 +6149,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row3_pos5_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -6137,7 +6161,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__down(new_value)
+    .. xbr:event:: on_row3_pos5_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -6149,7 +6173,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__warmer(new_value)
+    .. xbr:event:: on_row3_pos5_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -6161,7 +6185,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row3__pos5__switch__cushion__down(new_value)
+    .. xbr:event:: on_row3_pos5_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -6173,7 +6197,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row3_pos5_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -6185,7 +6209,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row3_pos5_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -6197,7 +6221,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__cushion__up(new_value)
+    .. xbr:event:: on_row3_pos5_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -6209,7 +6233,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__forward(new_value)
+    .. xbr:event:: on_row3_pos5_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -6221,7 +6245,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__backward(new_value)
+    .. xbr:event:: on_row3_pos5_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -6233,7 +6257,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__massage__increase(new_value)
+    .. xbr:event:: on_row3_pos5_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -6245,7 +6269,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos5__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row3_pos5_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -6257,7 +6281,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos5__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row3_pos5_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -6269,7 +6293,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row3_pos5_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -6281,7 +6305,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos5__cushion__length(new_value)
+    .. xbr:event:: on_row3_pos5_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -6293,7 +6317,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__cushion__height(new_value)
+    .. xbr:event:: on_row3_pos5_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -6305,7 +6329,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__is_belted(new_value)
+    .. xbr:event:: on_row3_pos5_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -6317,7 +6341,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__position(new_value)
+    .. xbr:event:: on_row3_pos5_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -6329,7 +6353,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row3_pos5_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -6341,7 +6365,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos5__massage(new_value)
+    .. xbr:event:: on_row3_pos5_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -6353,7 +6377,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__head_restraint__height(new_value)
+    .. xbr:event:: on_row3_pos2_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -6365,7 +6389,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__recline(new_value)
+    .. xbr:event:: on_row3_pos2_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -6377,7 +6401,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__has_passenger(new_value)
+    .. xbr:event:: on_row3_pos2_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -6389,7 +6413,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__heating(new_value)
+    .. xbr:event:: on_row3_pos2_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -6401,7 +6425,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__lumbar__inflation(new_value)
+    .. xbr:event:: on_row3_pos2_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -6413,7 +6437,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__lumbar__height(new_value)
+    .. xbr:event:: on_row3_pos2_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -6425,7 +6449,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row3_pos2_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -6437,7 +6461,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row3_pos2_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -6449,7 +6473,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row3_pos2_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -6461,7 +6485,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__cooler(new_value)
+    .. xbr:event:: on_row3_pos2_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -6473,7 +6497,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row3__pos2__switch__recline__forward(new_value)
+    .. xbr:event:: on_row3_pos2_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -6485,7 +6509,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__recline__backward(new_value)
+    .. xbr:event:: on_row3_pos2_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -6497,7 +6521,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__up(new_value)
+    .. xbr:event:: on_row3_pos2_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -6509,7 +6533,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row3_pos2_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -6521,7 +6545,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row3_pos2_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -6533,7 +6557,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row3_pos2_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -6545,7 +6569,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row3_pos2_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -6557,7 +6581,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__down(new_value)
+    .. xbr:event:: on_row3_pos2_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -6569,7 +6593,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__warmer(new_value)
+    .. xbr:event:: on_row3_pos2_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -6581,7 +6605,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row3__pos2__switch__cushion__down(new_value)
+    .. xbr:event:: on_row3_pos2_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -6593,7 +6617,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row3_pos2_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -6605,7 +6629,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row3_pos2_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -6617,7 +6641,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__cushion__up(new_value)
+    .. xbr:event:: on_row3_pos2_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -6629,7 +6653,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__forward(new_value)
+    .. xbr:event:: on_row3_pos2_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -6641,7 +6665,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__backward(new_value)
+    .. xbr:event:: on_row3_pos2_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -6653,7 +6677,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__massage__increase(new_value)
+    .. xbr:event:: on_row3_pos2_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -6665,7 +6689,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos2__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row3_pos2_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -6677,7 +6701,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos2__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row3_pos2_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -6689,7 +6713,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row3_pos2_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -6701,7 +6725,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos2__cushion__length(new_value)
+    .. xbr:event:: on_row3_pos2_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -6713,7 +6737,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__cushion__height(new_value)
+    .. xbr:event:: on_row3_pos2_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -6725,7 +6749,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__is_belted(new_value)
+    .. xbr:event:: on_row3_pos2_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -6737,7 +6761,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__position(new_value)
+    .. xbr:event:: on_row3_pos2_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -6749,7 +6773,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row3_pos2_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -6761,7 +6785,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos2__massage(new_value)
+    .. xbr:event:: on_row3_pos2_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -6773,7 +6797,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__head_restraint__height(new_value)
+    .. xbr:event:: on_row3_pos3_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -6785,7 +6809,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__recline(new_value)
+    .. xbr:event:: on_row3_pos3_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -6797,7 +6821,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__has_passenger(new_value)
+    .. xbr:event:: on_row3_pos3_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -6809,7 +6833,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__heating(new_value)
+    .. xbr:event:: on_row3_pos3_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -6821,7 +6845,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__lumbar__inflation(new_value)
+    .. xbr:event:: on_row3_pos3_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -6833,7 +6857,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__lumbar__height(new_value)
+    .. xbr:event:: on_row3_pos3_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -6845,7 +6869,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row3_pos3_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -6857,7 +6881,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row3_pos3_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -6869,7 +6893,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row3_pos3_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -6881,7 +6905,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__cooler(new_value)
+    .. xbr:event:: on_row3_pos3_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -6893,7 +6917,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row3__pos3__switch__recline__forward(new_value)
+    .. xbr:event:: on_row3_pos3_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -6905,7 +6929,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__recline__backward(new_value)
+    .. xbr:event:: on_row3_pos3_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -6917,7 +6941,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__up(new_value)
+    .. xbr:event:: on_row3_pos3_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -6929,7 +6953,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row3_pos3_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -6941,7 +6965,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row3_pos3_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -6953,7 +6977,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row3_pos3_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -6965,7 +6989,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row3_pos3_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -6977,7 +7001,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__down(new_value)
+    .. xbr:event:: on_row3_pos3_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -6989,7 +7013,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__warmer(new_value)
+    .. xbr:event:: on_row3_pos3_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -7001,7 +7025,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row3__pos3__switch__cushion__down(new_value)
+    .. xbr:event:: on_row3_pos3_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -7013,7 +7037,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row3_pos3_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -7025,7 +7049,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row3_pos3_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -7037,7 +7061,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__cushion__up(new_value)
+    .. xbr:event:: on_row3_pos3_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -7049,7 +7073,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__forward(new_value)
+    .. xbr:event:: on_row3_pos3_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -7061,7 +7085,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__backward(new_value)
+    .. xbr:event:: on_row3_pos3_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -7073,7 +7097,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__massage__increase(new_value)
+    .. xbr:event:: on_row3_pos3_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -7085,7 +7109,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos3__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row3_pos3_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -7097,7 +7121,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos3__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row3_pos3_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -7109,7 +7133,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row3_pos3_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -7121,7 +7145,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos3__cushion__length(new_value)
+    .. xbr:event:: on_row3_pos3_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -7133,7 +7157,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__cushion__height(new_value)
+    .. xbr:event:: on_row3_pos3_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -7145,7 +7169,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__is_belted(new_value)
+    .. xbr:event:: on_row3_pos3_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -7157,7 +7181,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__position(new_value)
+    .. xbr:event:: on_row3_pos3_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -7169,7 +7193,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row3_pos3_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -7181,7 +7205,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos3__massage(new_value)
+    .. xbr:event:: on_row3_pos3_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -7193,7 +7217,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__head_restraint__height(new_value)
+    .. xbr:event:: on_row3_pos1_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -7205,7 +7229,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__recline(new_value)
+    .. xbr:event:: on_row3_pos1_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -7217,7 +7241,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__has_passenger(new_value)
+    .. xbr:event:: on_row3_pos1_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -7229,7 +7253,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__heating(new_value)
+    .. xbr:event:: on_row3_pos1_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -7241,7 +7265,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__lumbar__inflation(new_value)
+    .. xbr:event:: on_row3_pos1_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -7253,7 +7277,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__lumbar__height(new_value)
+    .. xbr:event:: on_row3_pos1_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -7265,7 +7289,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row3_pos1_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -7277,7 +7301,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row3_pos1_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -7289,7 +7313,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row3_pos1_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -7301,7 +7325,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__cooler(new_value)
+    .. xbr:event:: on_row3_pos1_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -7313,7 +7337,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row3__pos1__switch__recline__forward(new_value)
+    .. xbr:event:: on_row3_pos1_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -7325,7 +7349,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__recline__backward(new_value)
+    .. xbr:event:: on_row3_pos1_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -7337,7 +7361,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__up(new_value)
+    .. xbr:event:: on_row3_pos1_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -7349,7 +7373,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row3_pos1_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -7361,7 +7385,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row3_pos1_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -7373,7 +7397,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row3_pos1_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -7385,7 +7409,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row3_pos1_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -7397,7 +7421,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__down(new_value)
+    .. xbr:event:: on_row3_pos1_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -7409,7 +7433,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__warmer(new_value)
+    .. xbr:event:: on_row3_pos1_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -7421,7 +7445,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row3__pos1__switch__cushion__down(new_value)
+    .. xbr:event:: on_row3_pos1_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -7433,7 +7457,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row3_pos1_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -7445,7 +7469,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row3_pos1_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -7457,7 +7481,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__cushion__up(new_value)
+    .. xbr:event:: on_row3_pos1_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -7469,7 +7493,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__forward(new_value)
+    .. xbr:event:: on_row3_pos1_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -7481,7 +7505,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__backward(new_value)
+    .. xbr:event:: on_row3_pos1_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -7493,7 +7517,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__massage__increase(new_value)
+    .. xbr:event:: on_row3_pos1_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -7505,7 +7529,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos1__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row3_pos1_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -7517,7 +7541,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row3__pos1__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row3_pos1_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -7529,7 +7553,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row3_pos1_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -7541,7 +7565,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row3__pos1__cushion__length(new_value)
+    .. xbr:event:: on_row3_pos1_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -7553,7 +7577,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__cushion__height(new_value)
+    .. xbr:event:: on_row3_pos1_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -7565,7 +7589,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__is_belted(new_value)
+    .. xbr:event:: on_row3_pos1_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -7577,7 +7601,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__position(new_value)
+    .. xbr:event:: on_row3_pos1_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -7589,7 +7613,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row3_pos1_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -7601,7 +7625,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row3__pos1__massage(new_value)
+    .. xbr:event:: on_row3_pos1_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -7613,7 +7637,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__head_restraint__height(new_value)
+    .. xbr:event:: on_row4_pos4_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -7625,7 +7649,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__recline(new_value)
+    .. xbr:event:: on_row4_pos4_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -7637,7 +7661,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__has_passenger(new_value)
+    .. xbr:event:: on_row4_pos4_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -7649,7 +7673,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__heating(new_value)
+    .. xbr:event:: on_row4_pos4_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -7661,7 +7685,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__lumbar__inflation(new_value)
+    .. xbr:event:: on_row4_pos4_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -7673,7 +7697,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__lumbar__height(new_value)
+    .. xbr:event:: on_row4_pos4_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -7685,7 +7709,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row4_pos4_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -7697,7 +7721,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row4_pos4_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -7709,7 +7733,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row4_pos4_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -7721,7 +7745,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__cooler(new_value)
+    .. xbr:event:: on_row4_pos4_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -7733,7 +7757,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row4__pos4__switch__recline__forward(new_value)
+    .. xbr:event:: on_row4_pos4_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -7745,7 +7769,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__recline__backward(new_value)
+    .. xbr:event:: on_row4_pos4_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -7757,7 +7781,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__up(new_value)
+    .. xbr:event:: on_row4_pos4_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -7769,7 +7793,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row4_pos4_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -7781,7 +7805,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row4_pos4_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -7793,7 +7817,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row4_pos4_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -7805,7 +7829,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row4_pos4_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -7817,7 +7841,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__down(new_value)
+    .. xbr:event:: on_row4_pos4_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -7829,7 +7853,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__warmer(new_value)
+    .. xbr:event:: on_row4_pos4_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -7841,7 +7865,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row4__pos4__switch__cushion__down(new_value)
+    .. xbr:event:: on_row4_pos4_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -7853,7 +7877,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row4_pos4_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -7865,7 +7889,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row4_pos4_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -7877,7 +7901,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__cushion__up(new_value)
+    .. xbr:event:: on_row4_pos4_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -7889,7 +7913,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__forward(new_value)
+    .. xbr:event:: on_row4_pos4_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -7901,7 +7925,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__backward(new_value)
+    .. xbr:event:: on_row4_pos4_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -7913,7 +7937,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__massage__increase(new_value)
+    .. xbr:event:: on_row4_pos4_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -7925,7 +7949,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos4__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row4_pos4_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -7937,7 +7961,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos4__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row4_pos4_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -7949,7 +7973,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row4_pos4_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -7961,7 +7985,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos4__cushion__length(new_value)
+    .. xbr:event:: on_row4_pos4_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -7973,7 +7997,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__cushion__height(new_value)
+    .. xbr:event:: on_row4_pos4_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -7985,7 +8009,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__is_belted(new_value)
+    .. xbr:event:: on_row4_pos4_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -7997,7 +8021,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__position(new_value)
+    .. xbr:event:: on_row4_pos4_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -8009,7 +8033,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row4_pos4_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -8021,7 +8045,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos4__massage(new_value)
+    .. xbr:event:: on_row4_pos4_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -8033,7 +8057,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__head_restraint__height(new_value)
+    .. xbr:event:: on_row4_pos5_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -8045,7 +8069,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__recline(new_value)
+    .. xbr:event:: on_row4_pos5_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -8057,7 +8081,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__has_passenger(new_value)
+    .. xbr:event:: on_row4_pos5_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -8069,7 +8093,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__heating(new_value)
+    .. xbr:event:: on_row4_pos5_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -8081,7 +8105,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__lumbar__inflation(new_value)
+    .. xbr:event:: on_row4_pos5_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -8093,7 +8117,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__lumbar__height(new_value)
+    .. xbr:event:: on_row4_pos5_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -8105,7 +8129,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row4_pos5_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -8117,7 +8141,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row4_pos5_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -8129,7 +8153,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row4_pos5_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -8141,7 +8165,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__cooler(new_value)
+    .. xbr:event:: on_row4_pos5_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -8153,7 +8177,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row4__pos5__switch__recline__forward(new_value)
+    .. xbr:event:: on_row4_pos5_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -8165,7 +8189,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__recline__backward(new_value)
+    .. xbr:event:: on_row4_pos5_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -8177,7 +8201,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__up(new_value)
+    .. xbr:event:: on_row4_pos5_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -8189,7 +8213,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row4_pos5_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -8201,7 +8225,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row4_pos5_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -8213,7 +8237,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row4_pos5_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -8225,7 +8249,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row4_pos5_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -8237,7 +8261,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__down(new_value)
+    .. xbr:event:: on_row4_pos5_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -8249,7 +8273,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__warmer(new_value)
+    .. xbr:event:: on_row4_pos5_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -8261,7 +8285,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row4__pos5__switch__cushion__down(new_value)
+    .. xbr:event:: on_row4_pos5_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -8273,7 +8297,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row4_pos5_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -8285,7 +8309,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row4_pos5_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -8297,7 +8321,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__cushion__up(new_value)
+    .. xbr:event:: on_row4_pos5_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -8309,7 +8333,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__forward(new_value)
+    .. xbr:event:: on_row4_pos5_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -8321,7 +8345,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__backward(new_value)
+    .. xbr:event:: on_row4_pos5_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -8333,7 +8357,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__massage__increase(new_value)
+    .. xbr:event:: on_row4_pos5_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -8345,7 +8369,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos5__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row4_pos5_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -8357,7 +8381,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos5__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row4_pos5_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -8369,7 +8393,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row4_pos5_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -8381,7 +8405,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos5__cushion__length(new_value)
+    .. xbr:event:: on_row4_pos5_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -8393,7 +8417,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__cushion__height(new_value)
+    .. xbr:event:: on_row4_pos5_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -8405,7 +8429,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__is_belted(new_value)
+    .. xbr:event:: on_row4_pos5_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -8417,7 +8441,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__position(new_value)
+    .. xbr:event:: on_row4_pos5_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -8429,7 +8453,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row4_pos5_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -8441,7 +8465,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos5__massage(new_value)
+    .. xbr:event:: on_row4_pos5_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -8453,7 +8477,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__head_restraint__height(new_value)
+    .. xbr:event:: on_row4_pos2_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -8465,7 +8489,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__recline(new_value)
+    .. xbr:event:: on_row4_pos2_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -8477,7 +8501,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__has_passenger(new_value)
+    .. xbr:event:: on_row4_pos2_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -8489,7 +8513,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__heating(new_value)
+    .. xbr:event:: on_row4_pos2_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -8501,7 +8525,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__lumbar__inflation(new_value)
+    .. xbr:event:: on_row4_pos2_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -8513,7 +8537,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__lumbar__height(new_value)
+    .. xbr:event:: on_row4_pos2_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -8525,7 +8549,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row4_pos2_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -8537,7 +8561,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row4_pos2_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -8549,7 +8573,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row4_pos2_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -8561,7 +8585,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__cooler(new_value)
+    .. xbr:event:: on_row4_pos2_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -8573,7 +8597,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row4__pos2__switch__recline__forward(new_value)
+    .. xbr:event:: on_row4_pos2_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -8585,7 +8609,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__recline__backward(new_value)
+    .. xbr:event:: on_row4_pos2_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -8597,7 +8621,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__up(new_value)
+    .. xbr:event:: on_row4_pos2_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -8609,7 +8633,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row4_pos2_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -8621,7 +8645,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row4_pos2_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -8633,7 +8657,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row4_pos2_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -8645,7 +8669,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row4_pos2_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -8657,7 +8681,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__down(new_value)
+    .. xbr:event:: on_row4_pos2_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -8669,7 +8693,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__warmer(new_value)
+    .. xbr:event:: on_row4_pos2_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -8681,7 +8705,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row4__pos2__switch__cushion__down(new_value)
+    .. xbr:event:: on_row4_pos2_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -8693,7 +8717,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row4_pos2_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -8705,7 +8729,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row4_pos2_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -8717,7 +8741,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__cushion__up(new_value)
+    .. xbr:event:: on_row4_pos2_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -8729,7 +8753,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__forward(new_value)
+    .. xbr:event:: on_row4_pos2_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -8741,7 +8765,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__backward(new_value)
+    .. xbr:event:: on_row4_pos2_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -8753,7 +8777,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__massage__increase(new_value)
+    .. xbr:event:: on_row4_pos2_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -8765,7 +8789,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos2__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row4_pos2_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -8777,7 +8801,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos2__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row4_pos2_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -8789,7 +8813,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row4_pos2_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -8801,7 +8825,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos2__cushion__length(new_value)
+    .. xbr:event:: on_row4_pos2_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -8813,7 +8837,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__cushion__height(new_value)
+    .. xbr:event:: on_row4_pos2_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -8825,7 +8849,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__is_belted(new_value)
+    .. xbr:event:: on_row4_pos2_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -8837,7 +8861,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__position(new_value)
+    .. xbr:event:: on_row4_pos2_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -8849,7 +8873,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row4_pos2_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -8861,7 +8885,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos2__massage(new_value)
+    .. xbr:event:: on_row4_pos2_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -8873,7 +8897,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__head_restraint__height(new_value)
+    .. xbr:event:: on_row4_pos3_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -8885,7 +8909,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__recline(new_value)
+    .. xbr:event:: on_row4_pos3_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -8897,7 +8921,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__has_passenger(new_value)
+    .. xbr:event:: on_row4_pos3_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -8909,7 +8933,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__heating(new_value)
+    .. xbr:event:: on_row4_pos3_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -8921,7 +8945,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__lumbar__inflation(new_value)
+    .. xbr:event:: on_row4_pos3_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -8933,7 +8957,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__lumbar__height(new_value)
+    .. xbr:event:: on_row4_pos3_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -8945,7 +8969,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row4_pos3_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -8957,7 +8981,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row4_pos3_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -8969,7 +8993,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row4_pos3_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -8981,7 +9005,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__cooler(new_value)
+    .. xbr:event:: on_row4_pos3_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -8993,7 +9017,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row4__pos3__switch__recline__forward(new_value)
+    .. xbr:event:: on_row4_pos3_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -9005,7 +9029,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__recline__backward(new_value)
+    .. xbr:event:: on_row4_pos3_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -9017,7 +9041,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__up(new_value)
+    .. xbr:event:: on_row4_pos3_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -9029,7 +9053,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row4_pos3_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -9041,7 +9065,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row4_pos3_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -9053,7 +9077,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row4_pos3_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -9065,7 +9089,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row4_pos3_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -9077,7 +9101,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__down(new_value)
+    .. xbr:event:: on_row4_pos3_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -9089,7 +9113,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__warmer(new_value)
+    .. xbr:event:: on_row4_pos3_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -9101,7 +9125,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row4__pos3__switch__cushion__down(new_value)
+    .. xbr:event:: on_row4_pos3_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -9113,7 +9137,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row4_pos3_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -9125,7 +9149,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row4_pos3_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -9137,7 +9161,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__cushion__up(new_value)
+    .. xbr:event:: on_row4_pos3_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -9149,7 +9173,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__forward(new_value)
+    .. xbr:event:: on_row4_pos3_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -9161,7 +9185,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__backward(new_value)
+    .. xbr:event:: on_row4_pos3_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -9173,7 +9197,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__massage__increase(new_value)
+    .. xbr:event:: on_row4_pos3_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -9185,7 +9209,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos3__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row4_pos3_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -9197,7 +9221,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos3__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row4_pos3_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -9209,7 +9233,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row4_pos3_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -9221,7 +9245,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos3__cushion__length(new_value)
+    .. xbr:event:: on_row4_pos3_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -9233,7 +9257,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__cushion__height(new_value)
+    .. xbr:event:: on_row4_pos3_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -9245,7 +9269,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__is_belted(new_value)
+    .. xbr:event:: on_row4_pos3_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -9257,7 +9281,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__position(new_value)
+    .. xbr:event:: on_row4_pos3_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -9269,7 +9293,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row4_pos3_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -9281,7 +9305,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos3__massage(new_value)
+    .. xbr:event:: on_row4_pos3_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -9293,7 +9317,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__head_restraint__height(new_value)
+    .. xbr:event:: on_row4_pos1_head_restraint_height(new_value)
 
         :param new_value: Height of head restraint. 0 = Bottommost. 255 = Topmost.
         :type new_value: int
@@ -9305,7 +9329,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__recline(new_value)
+    .. xbr:event:: on_row4_pos1_recline(new_value)
 
         :param new_value: Recline level. -90 = Max forward recline. 90 max backward recline
         :type new_value: int
@@ -9317,7 +9341,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__has_passenger(new_value)
+    .. xbr:event:: on_row4_pos1_has_passenger(new_value)
 
         :param new_value: Does the seat have a passenger in it.
         :type new_value: bool
@@ -9329,7 +9353,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__heating(new_value)
+    .. xbr:event:: on_row4_pos1_heating(new_value)
 
         :param new_value: Seat cooling / heating. 0 = off. -100 = max cold. +100 = max heat
         :type new_value: int
@@ -9341,7 +9365,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__lumbar__inflation(new_value)
+    .. xbr:event:: on_row4_pos1_lumbar_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -9353,7 +9377,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__lumbar__height(new_value)
+    .. xbr:event:: on_row4_pos1_lumbar_height(new_value)
 
         :param new_value: Lumbar support position. 0 = Lowermost. 255 = Uppermost.
         :type new_value: int
@@ -9365,7 +9389,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__airbag__is_deployed(new_value)
+    .. xbr:event:: on_row4_pos1_airbag_is_deployed(new_value)
 
         :param new_value: Airbag deployment status. True = Airbag deployed. False = Airbag not deployed.
         :type new_value: bool
@@ -9377,7 +9401,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__switch__head_restraint__down(new_value)
+    .. xbr:event:: on_row4_pos1_switch_head_restraint_down(new_value)
 
         :param new_value: Head restraint down switch engaged
         :type new_value: bool
@@ -9389,7 +9413,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__head_restraint__up(new_value)
+    .. xbr:event:: on_row4_pos1_switch_head_restraint_up(new_value)
 
         :param new_value: Head restraint up switch engaged
         :type new_value: bool
@@ -9401,7 +9425,7 @@ ISeat
         :vss_actuator: Head Restraint Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__cooler(new_value)
+    .. xbr:event:: on_row4_pos1_switch_cooler(new_value)
 
         :param new_value: Cooler switch for Seat heater
         :type new_value: bool
@@ -9413,7 +9437,7 @@ ISeat
         :vss_actuator: Seat Cooler 
 
 
-    .. xbr:event:: on_row4__pos1__switch__recline__forward(new_value)
+    .. xbr:event:: on_row4_pos1_switch_recline_forward(new_value)
 
         :param new_value: Seatback recline forward switch engaged
         :type new_value: bool
@@ -9425,7 +9449,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__recline__backward(new_value)
+    .. xbr:event:: on_row4_pos1_switch_recline_backward(new_value)
 
         :param new_value: Seatback recline backward switch engaged
         :type new_value: bool
@@ -9437,7 +9461,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__up(new_value)
+    .. xbr:event:: on_row4_pos1_switch_up(new_value)
 
         :param new_value: Seat up switch engaged
         :type new_value: bool
@@ -9449,7 +9473,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__lumbar__down(new_value)
+    .. xbr:event:: on_row4_pos1_switch_lumbar_down(new_value)
 
         :param new_value: Lumbar down switch engaged
         :type new_value: bool
@@ -9461,7 +9485,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__lumbar__inflate(new_value)
+    .. xbr:event:: on_row4_pos1_switch_lumbar_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -9473,7 +9497,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__lumbar__up(new_value)
+    .. xbr:event:: on_row4_pos1_switch_lumbar_up(new_value)
 
         :param new_value: Lumbar up switch engaged
         :type new_value: bool
@@ -9485,7 +9509,7 @@ ISeat
         :vss_actuator: Lumbar Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__lumbar__deflate(new_value)
+    .. xbr:event:: on_row4_pos1_switch_lumbar_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -9497,7 +9521,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__down(new_value)
+    .. xbr:event:: on_row4_pos1_switch_down(new_value)
 
         :param new_value: Seat down switch engaged
         :type new_value: bool
@@ -9509,7 +9533,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__warmer(new_value)
+    .. xbr:event:: on_row4_pos1_switch_warmer(new_value)
 
         :param new_value: Warmer switch for Seat heater
         :type new_value: bool
@@ -9521,7 +9545,7 @@ ISeat
         :vss_actuator: Seat Heater 
 
 
-    .. xbr:event:: on_row4__pos1__switch__cushion__down(new_value)
+    .. xbr:event:: on_row4_pos1_switch_cushion_down(new_value)
 
         :param new_value: Seat cushion down switch engaged
         :type new_value: bool
@@ -9533,7 +9557,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__cushion__forward(new_value)
+    .. xbr:event:: on_row4_pos1_switch_cushion_forward(new_value)
 
         :param new_value: Seat cushion forward/lengthen switch engaged
         :type new_value: bool
@@ -9545,7 +9569,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__cushion__backward(new_value)
+    .. xbr:event:: on_row4_pos1_switch_cushion_backward(new_value)
 
         :param new_value: Seat cushion backward/shorten switch engaged
         :type new_value: bool
@@ -9557,7 +9581,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__cushion__up(new_value)
+    .. xbr:event:: on_row4_pos1_switch_cushion_up(new_value)
 
         :param new_value: Seat cushion up switch engaged
         :type new_value: bool
@@ -9569,7 +9593,7 @@ ISeat
         :vss_actuator: Cushion Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__forward(new_value)
+    .. xbr:event:: on_row4_pos1_switch_forward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -9581,7 +9605,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__backward(new_value)
+    .. xbr:event:: on_row4_pos1_switch_backward(new_value)
 
         :param new_value: Seat forward switch engaged
         :type new_value: bool
@@ -9593,7 +9617,7 @@ ISeat
         :vss_actuator: Seat Position Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__massage__increase(new_value)
+    .. xbr:event:: on_row4_pos1_switch_massage_increase(new_value)
 
         :param new_value: Increase massage level switch engaged
         :type new_value: bool
@@ -9605,7 +9629,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos1__switch__massage__decrease(new_value)
+    .. xbr:event:: on_row4_pos1_switch_massage_decrease(new_value)
 
         :param new_value: Decrease massage level switch engaged
         :type new_value: bool
@@ -9617,7 +9641,7 @@ ISeat
         :vss_actuator: Massage System 
 
 
-    .. xbr:event:: on_row4__pos1__switch__side_bolster__inflate(new_value)
+    .. xbr:event:: on_row4_pos1_switch_side_bolster_inflate(new_value)
 
         :param new_value: Lumbar inflation switch engaged
         :type new_value: bool
@@ -9629,7 +9653,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__switch__side_bolster__deflate(new_value)
+    .. xbr:event:: on_row4_pos1_switch_side_bolster_deflate(new_value)
 
         :param new_value: Lumbar deflation switch engaged
         :type new_value: bool
@@ -9641,7 +9665,7 @@ ISeat
         :vss_actuator: Lumbar Pressure Actuator 
 
 
-    .. xbr:event:: on_row4__pos1__cushion__length(new_value)
+    .. xbr:event:: on_row4_pos1_cushion_length(new_value)
 
         :param new_value: Forward length of cushion (leg support). 0 = Rearmost. 500 = Forwardmost.
         :type new_value: int
@@ -9653,7 +9677,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__cushion__height(new_value)
+    .. xbr:event:: on_row4_pos1_cushion_height(new_value)
 
         :param new_value: Height of the seat front. 0 = Lowermost. 500 = Uppermost.
         :type new_value: int
@@ -9665,7 +9689,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__is_belted(new_value)
+    .. xbr:event:: on_row4_pos1_is_belted(new_value)
 
         :param new_value: Is the belt engaged.
         :type new_value: bool
@@ -9677,7 +9701,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__position(new_value)
+    .. xbr:event:: on_row4_pos1_position(new_value)
 
         :param new_value: Seat horizontal position. 0 = Frontmost. 1000 = Rearmost
         :type new_value: int
@@ -9689,7 +9713,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__side_bolster__inflation(new_value)
+    .. xbr:event:: on_row4_pos1_side_bolster_inflation(new_value)
 
         :param new_value: Lumbar support inflation. 0 = Fully deflated. 255 = Fully inflated.
         :type new_value: int
@@ -9701,7 +9725,7 @@ ISeat
         
 
 
-    .. xbr:event:: on_row4__pos1__massage(new_value)
+    .. xbr:event:: on_row4_pos1_massage(new_value)
 
         :param new_value: Seat massage level. 0 = off. 100 = max massage.
         :type new_value: int
@@ -9715,12 +9739,14 @@ ISeat
 ILights
 -------
 
+Interior lights signals and sensors.
+
 .. xbr:interface:: ILights
 
     Interior lights signals and sensors
 
 
-    .. xbr:event:: on_row1__is_shared_on(new_value)
+    .. xbr:event:: on_row1_is_shared_on(new_value)
 
         :param new_value: Is light shared across first row on
         :type new_value: bool
@@ -9732,7 +9758,7 @@ ILights
         
 
 
-    .. xbr:event:: on_row1__right__is_passenger_on(new_value)
+    .. xbr:event:: on_row1_right_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9744,7 +9770,7 @@ ILights
         :vss_actuator: Passenger Light 
 
 
-    .. xbr:event:: on_row1__left__is_passenger_on(new_value)
+    .. xbr:event:: on_row1_left_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9756,7 +9782,7 @@ ILights
         :vss_actuator: Passenger Light 
 
 
-    .. xbr:event:: on_row2__is_shared_on(new_value)
+    .. xbr:event:: on_row2_is_shared_on(new_value)
 
         :param new_value: Is light shared across second row on
         :type new_value: bool
@@ -9768,7 +9794,7 @@ ILights
         
 
 
-    .. xbr:event:: on_row2__right__is_passenger_on(new_value)
+    .. xbr:event:: on_row2_right_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9780,7 +9806,7 @@ ILights
         :vss_actuator: Passenger Light 
 
 
-    .. xbr:event:: on_row2__left__is_passenger_on(new_value)
+    .. xbr:event:: on_row2_left_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9792,7 +9818,7 @@ ILights
         :vss_actuator: Passenger Light 
 
 
-    .. xbr:event:: on_row3__is_shared_on(new_value)
+    .. xbr:event:: on_row3_is_shared_on(new_value)
 
         :param new_value: Is light shared third across row on
         :type new_value: bool
@@ -9804,7 +9830,7 @@ ILights
         
 
 
-    .. xbr:event:: on_row3__right__is_passenger_on(new_value)
+    .. xbr:event:: on_row3_right_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9816,7 +9842,7 @@ ILights
         :vss_actuator: Passenger Light 
 
 
-    .. xbr:event:: on_row3__left__is_passenger_on(new_value)
+    .. xbr:event:: on_row3_left_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9828,7 +9854,7 @@ ILights
         :vss_actuator: Passenger Light 
 
 
-    .. xbr:event:: on_row4__is_shared_on(new_value)
+    .. xbr:event:: on_row4_is_shared_on(new_value)
 
         :param new_value: Is light shared across fourth row on
         :type new_value: bool
@@ -9840,7 +9866,7 @@ ILights
         
 
 
-    .. xbr:event:: on_row4__right__is_passenger_on(new_value)
+    .. xbr:event:: on_row4_right_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9852,7 +9878,7 @@ ILights
         :vss_actuator: Passenger Light 
 
 
-    .. xbr:event:: on_row4__left__is_passenger_on(new_value)
+    .. xbr:event:: on_row4_left_is_passenger_on(new_value)
 
         :param new_value: Is passenger light on
         :type new_value: bool
@@ -9926,6 +9952,8 @@ ILights
 IRearviewMirror
 ---------------
 
+Rearview mirror.
+
 .. xbr:interface:: IRearviewMirror
 
     Rearview mirror
@@ -9944,6 +9972,8 @@ IRearviewMirror
 
 IRearShade
 ----------
+
+Rear window shade..
 
 .. xbr:interface:: IRearShade
 
