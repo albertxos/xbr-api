@@ -79,7 +79,7 @@ IFC_TMPL_jenv = jinja2.Environment().from_string(IFC_TMPL)
 #
 EVT_TMPL = """
 
-    .. xbr:event:: {{ evt_name }}(new_value)
+    .. xbr:event:: {{ name }}(new_value)
 
         :param new_value: {{ value_desc }}
         :type new_value: {{ value_type }}
@@ -95,6 +95,27 @@ EVT_TMPL = """
 EVT_TMPL_jenv = jinja2.Environment().from_string(EVT_TMPL)
 
 
+#
+# Jinja2 template to render a XBR procedure Sphinx directive
+#
+GET_TMPL = """
+
+    .. xbr:procedure:: {{ name }}
+
+        :returns: {{ value_desc }}
+        :rtype: {{ value_type }}
+        {% if value_att_id %}:vss_id: {{ value_att_id }} {% endif %}
+        {% if value_att_enum %}:vss_enum: {{ value_att_enum }} {% endif %}
+        {% if value_att_type %}:vss_type: {{ value_att_type }} {% endif %}
+        {% if value_att_unit %}:vss_unit: {{ value_att_unit }} {% endif %}
+        {% if value_att_sensor %}:vss_sensor: {{ value_att_sensor }} {% endif %}
+        {% if value_att_actuator %}:vss_actuator: {{ value_att_actuator }} {% endif %}
+
+"""
+
+GET_TMPL_jenv = jinja2.Environment().from_string(GET_TMPL)
+
+
 URI_PREFIX = 'org.genivi.vss'
 INPUT_SPEC = './extern/vss/vss_rel_1.0.json'
 OUTPUT_DIR = './api/namespace/org/genivi/vss/'
@@ -102,6 +123,7 @@ OUTPUT_DIR = './api/namespace/org/genivi/vss/'
 CNT_NAMESPACES = 0
 CNT_INTERFACES = 0
 CNT_EVENTS = 0
+CNT_GETS = 0
 
 data = None
 with open(INPUT_SPEC) as fd:
@@ -156,27 +178,38 @@ for ns, ns_data in sorted(nss.items()):
             recurse([], ifc_data, evts)
 
             for evt, evt_data in sorted(evts):
-                CNT_EVENTS += 1
 
                 #
                 # convert all event names to snake case, and prefix
                 # all events with "on_"
                 #
+                evt = evt.replace('DTC', 'Dtc')
+                evt = evt.replace('MIL', 'Mil')
+                evt = evt.replace('MAF', 'Maf')
+                evt = evt.replace('MAP', 'Map')
+                evt = evt.replace('MAX', 'Max')
+                evt = evt.replace('EGR', 'Egr')
+                evt = evt.replace('URI', 'Uri')
+                evt = evt.replace('EVAP', 'Evap')
+                #print(evt)
+
                 ep = evt.split('.')
 
-                # FIXME: hack, otherwise stringcase.snakecase will convert
-                # ABC => a_b_c
-                if ep[-1].isupper():
-                    ep[-1] = ep[-1].lower()
-                ep = [stringcase.snakecase(x) for x in ep]
+                def sc(s):
+                    # FIXME: hack, otherwise stringcase.snakecase will convert
+                    # ABC => a_b_c
+                    if s.isupper():
+                        return s.lower()
+                    else:
+                        return stringcase.snakecase(s)
 
-                if False:
-                    ep[-1] = 'on_{}'.format(ep[-1])
-                    evt_name = '.'.join(ep)
-                else:
-                    evt_name = 'on_' + '_'.join(ep)
+                ep = [sc(x) for x in ep]
 
-                print(evt_name)
+                evt_name = 'on_' + '_'.join(ep)
+                get_name = 'get_' + '_'.join(ep)
+
+                print('EVENT     : ', evt_name)
+                print('PROCEDURE : ', get_name)
 
                 value_att_id = evt_data.get('id', None)
                 value_att_sensor = evt_data.get('sensor', None)
@@ -188,7 +221,7 @@ for ns, ns_data in sorted(nss.items()):
                 value_desc = evt_data.get('description', 'FIXME')
                 value_type = TYPES_MAP.get(evt_data.get('type', 'Undefined'), 'undefined')
 
-                rst_output = EVT_TMPL_jenv.render(evt_name=evt_name,
+                rst_output = EVT_TMPL_jenv.render(name=evt_name,
                                                   value_desc=value_desc,
                                                   value_type=value_type,
                                                   value_att_id=value_att_id,
@@ -198,13 +231,30 @@ for ns, ns_data in sorted(nss.items()):
                                                   value_att_sensor=value_att_sensor,
                                                   value_att_actuator=value_att_actuator)
                 ns_fd.write(rst_output)
+                CNT_EVENTS += 1
+
+                rst_output = GET_TMPL_jenv.render(name=get_name,
+                                                  value_desc=value_desc,
+                                                  value_type=value_type,
+                                                  value_att_id=value_att_id,
+                                                  value_att_enum=value_att_enum,
+                                                  value_att_type=value_att_type,
+                                                  value_att_unit=value_att_unit,
+                                                  value_att_sensor=value_att_sensor,
+                                                  value_att_actuator=value_att_actuator)
+                ns_fd.write(rst_output)
+                CNT_GETS += 1
 
 DONE = """
 
 Namespaces:   {namespaces}
 Interfaces:   {interfaces}
 Events:       {events}
+Procedures:   {procedures}
 
-""".format(namespaces=CNT_NAMESPACES, interfaces=CNT_INTERFACES, events=CNT_EVENTS)
+""".format(namespaces=CNT_NAMESPACES,
+           interfaces=CNT_INTERFACES,
+           events=CNT_EVENTS,
+           procedures=CNT_GETS)
 
 print(DONE)

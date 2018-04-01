@@ -41,10 +41,34 @@ Battery Management signals.
         
 
 
+    .. xbr:procedure:: get_battery_capacity
+
+        :returns: Remaining capacity of the batter pack
+        :rtype: int
+        :vss_id: 76 
+        
+        :vss_type: Int8 
+        :vss_unit: percent 
+        :vss_sensor: Battery Monitor 
+        
+
+
     .. xbr:event:: on_battery_temperature(new_value)
 
         :param new_value: Temperature of the battery pack
         :type new_value: float
+        :vss_id: 75 
+        
+        :vss_type: Float 
+        :vss_unit: celsius 
+        :vss_sensor: Thermometer 
+        
+
+
+    .. xbr:procedure:: get_battery_temperature
+
+        :returns: Temperature of the battery pack
+        :rtype: float
         :vss_id: 75 
         
         :vss_type: Float 
@@ -92,10 +116,34 @@ Fuel system signals.
         
 
 
+    .. xbr:procedure:: get_average_consumption
+
+        :returns: Average consumption in liters per 100 km.
+        :rtype: float
+        :vss_id: 80 
+        
+        :vss_type: Float 
+        :vss_unit: l/100km 
+        :vss_sensor: Flow Sensor 
+        
+
+
     .. xbr:event:: on_consumption_since_start(new_value)
 
         :param new_value: Fuel amount consumed since start in liters.
         :type new_value: float
+        :vss_id: 81 
+        
+        :vss_type: Float 
+        :vss_unit: l 
+        :vss_sensor: Flow Sensor 
+        
+
+
+    .. xbr:procedure:: get_consumption_since_start
+
+        :returns: Fuel amount consumed since start in liters.
+        :rtype: float
         :vss_id: 81 
         
         :vss_type: Float 
@@ -116,10 +164,34 @@ Fuel system signals.
         
 
 
+    .. xbr:procedure:: get_instant_consumption
+
+        :returns: Current consumption in liters per 100 km.
+        :rtype: float
+        :vss_id: 79 
+        
+        :vss_type: Float 
+        :vss_unit: l/100km 
+        :vss_sensor: Flow Sensor 
+        
+
+
     .. xbr:event:: on_level(new_value)
 
         :param new_value: Level in fuel tank as percent of capacity. 0 = empty. 100 = full.
         :type new_value: int
+        :vss_id: 77 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Fuel Tank Level Sensor 
+        
+
+
+    .. xbr:procedure:: get_level
+
+        :returns: Level in fuel tank as percent of capacity. 0 = empty. 100 = full.
+        :rtype: int
         :vss_id: 77 
         
         :vss_type: UInt8 
@@ -140,10 +212,34 @@ Fuel system signals.
         
 
 
+    .. xbr:procedure:: get_range
+
+        :returns: Range in meters.
+        :rtype: int
+        :vss_id: 78 
+        
+        :vss_type: UInt32 
+        :vss_unit: m 
+        :vss_sensor: Fuel Tank Level Sensor 
+        
+
+
     .. xbr:event:: on_time_since_start(new_value)
 
         :param new_value: Time elapsed since start in seconds.
         :type new_value: int
+        :vss_id: 82 
+        
+        :vss_type: UInt32 
+        :vss_unit: s 
+        :vss_sensor: Timer 
+        
+
+
+    .. xbr:procedure:: get_time_since_start
+
+        :returns: Time elapsed since start in seconds.
+        :rtype: int
         :vss_id: 82 
         
         :vss_type: UInt32 
@@ -173,10 +269,34 @@ Engine-specific data, stopping at the bell housing..
         
 
 
+    .. xbr:procedure:: get_engine_ambient_air_temperature
+
+        :returns: Ambient (Outside) air temperature
+        :rtype: float
+        :vss_id: 1120 
+        
+        :vss_type: Float 
+        :vss_unit: celsius 
+        :vss_sensor: Thermometer 
+        
+
+
     .. xbr:event:: on_engine_ect(new_value)
 
         :param new_value: Engine coolant temperature.
         :type new_value: int
+        :vss_id: 1112 
+        
+        :vss_type: Int16 
+        :vss_unit: celsius 
+        :vss_sensor: Coolant Thermometer 
+        
+
+
+    .. xbr:procedure:: get_engine_ect
+
+        :returns: Engine coolant temperature.
+        :rtype: int
         :vss_id: 1112 
         
         :vss_type: Int16 
@@ -197,10 +317,34 @@ Engine-specific data, stopping at the bell housing..
         
 
 
+    .. xbr:procedure:: get_engine_eop
+
+        :returns: Engine oil pressure.
+        :rtype: int
+        :vss_id: 1117 
+        
+        :vss_type: Int16 
+        :vss_unit: kpa 
+        :vss_sensor: Oil Pressure Sensor 
+        
+
+
     .. xbr:event:: on_engine_eot(new_value)
 
         :param new_value: Engine oil temperature.
         :type new_value: int
+        :vss_id: 1113 
+        
+        :vss_type: Int16 
+        :vss_unit: celsius 
+        :vss_sensor: Oil Thermometer 
+        
+
+
+    .. xbr:procedure:: get_engine_eot
+
+        :returns: Engine oil temperature.
+        :rtype: int
         :vss_id: 1113 
         
         :vss_type: Int16 
@@ -221,10 +365,34 @@ Engine-specific data, stopping at the bell housing..
         
 
 
+    .. xbr:procedure:: get_engine_maf
+
+        :returns: Grams of air drawn into engine per second.
+        :rtype: int
+        :vss_id: 1115 
+        
+        :vss_type: Int16 
+        :vss_unit: g/s 
+        :vss_sensor: Mass Air Flow Sensor 
+        
+
+
     .. xbr:event:: on_engine_map(new_value)
 
         :param new_value: Manifold air pressure possibly boosted using forced induction.
         :type new_value: int
+        :vss_id: 1114 
+        
+        :vss_type: Int16 
+        :vss_unit: kpa 
+        :vss_sensor: Manifold Air Pressure Sensor 
+        
+
+
+    .. xbr:procedure:: get_engine_map
+
+        :returns: Manifold air pressure possibly boosted using forced induction.
+        :rtype: int
         :vss_id: 1114 
         
         :vss_type: Int16 
@@ -245,10 +413,34 @@ Engine-specific data, stopping at the bell housing..
         
 
 
+    .. xbr:procedure:: get_engine_power
+
+        :returns: Current engine power output.
+        :rtype: int
+        :vss_id: 1118 
+        
+        :vss_type: Int16 
+        :vss_unit: kW 
+        :vss_sensor: Power Meter 
+        
+
+
     .. xbr:event:: on_engine_speed(new_value)
 
         :param new_value: Engine speed measured as rotations per minute.
         :type new_value: int
+        :vss_id: 1111 
+        
+        :vss_type: UInt16 
+        :vss_unit: rpm 
+        :vss_sensor: Rotational Speed Sensor 
+        
+
+
+    .. xbr:procedure:: get_engine_speed
+
+        :returns: Engine speed measured as rotations per minute.
+        :rtype: int
         :vss_id: 1111 
         
         :vss_type: UInt16 
@@ -269,10 +461,34 @@ Engine-specific data, stopping at the bell housing..
         
 
 
+    .. xbr:procedure:: get_engine_tps
+
+        :returns: Current throttle position.
+        :rtype: int
+        :vss_id: 1116 
+        
+        :vss_type: Int8 
+        :vss_unit: percent 
+        :vss_sensor: Throttle Position Sensor 
+        
+
+
     .. xbr:event:: on_engine_torque(new_value)
 
         :param new_value: Current engine torque.
         :type new_value: int
+        :vss_id: 1119 
+        
+        :vss_type: Int16 
+        :vss_unit: N.m 
+        :vss_sensor: Torque Meter 
+        
+
+
+    .. xbr:procedure:: get_engine_torque
+
+        :returns: Current engine torque.
+        :rtype: int
         :vss_id: 1119 
         
         :vss_type: Int16 
@@ -302,10 +518,34 @@ Transmission-specific data, stopping at the drive shafts..
         
 
 
+    .. xbr:procedure:: get_clutch_wear
+
+        :returns: Clutch wear as a percent. 0 = no wear. 100 = worn.
+        :rtype: int
+        :vss_id: 74 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Clutch Wear Indicator 
+        
+
+
     .. xbr:event:: on_gear(new_value)
 
         :param new_value: Current gear. 0=Neutral. -1=Reverse
         :type new_value: int
+        :vss_id: 70 
+        
+        :vss_type: Int8 
+        
+        :vss_sensor: Gearbox 
+        :vss_actuator: Gearbox 
+
+
+    .. xbr:procedure:: get_gear
+
+        :returns: Current gear. 0=Neutral. -1=Reverse
+        :rtype: int
         :vss_id: 70 
         
         :vss_type: Int8 
@@ -326,10 +566,34 @@ Transmission-specific data, stopping at the drive shafts..
         :vss_actuator: Drive System 
 
 
+    .. xbr:procedure:: get_gear_change_mode
+
+        :returns: Is the gearbox in automatic or manual (paddle) mode.
+        :rtype: str
+        :vss_id: 72 
+        :vss_enum: ['manual', 'automatic'] 
+        :vss_type: String 
+        
+        :vss_sensor: Drive System 
+        :vss_actuator: Drive System 
+
+
     .. xbr:event:: on_performance_mode(new_value)
 
         :param new_value: Current gearbox performance mode.
         :type new_value: str
+        :vss_id: 71 
+        :vss_enum: ['normal', 'sport', 'economy', 'snow', 'rain'] 
+        :vss_type: String 
+        
+        :vss_sensor: Drive System 
+        :vss_actuator: Drive System 
+
+
+    .. xbr:procedure:: get_performance_mode
+
+        :returns: Current gearbox performance mode.
+        :rtype: str
         :vss_id: 71 
         :vss_enum: ['normal', 'sport', 'economy', 'snow', 'rain'] 
         :vss_type: String 
@@ -350,6 +614,18 @@ Transmission-specific data, stopping at the drive shafts..
         
 
 
+    .. xbr:procedure:: get_speed
+
+        :returns: Vehicle speed, as sensed by the gearbox.
+        :rtype: int
+        :vss_id: 68 
+        
+        :vss_type: Int32 
+        :vss_unit: km/h 
+        :vss_sensor: Speedometer 
+        
+
+
     .. xbr:event:: on_temperature(new_value)
 
         :param new_value: The current gearbox temperature
@@ -362,10 +638,34 @@ Transmission-specific data, stopping at the drive shafts..
         
 
 
+    .. xbr:procedure:: get_temperature
+
+        :returns: The current gearbox temperature
+        :rtype: int
+        :vss_id: 73 
+        
+        :vss_type: Int16 
+        :vss_unit: celsius 
+        
+        
+
+
     .. xbr:event:: on_travelled_distance(new_value)
 
         :param new_value: Odometer reading
         :type new_value: float
+        :vss_id: 1121 
+        
+        :vss_type: Float 
+        :vss_unit: km 
+        :vss_sensor: Odometer 
+        
+
+
+    .. xbr:procedure:: get_travelled_distance
+
+        :returns: Odometer reading
+        :rtype: float
         :vss_id: 1121 
         
         :vss_type: Float 

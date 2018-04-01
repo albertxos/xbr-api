@@ -41,6 +41,18 @@ Antilock Braking System signals.
         
 
 
+    .. xbr:procedure:: get_error
+
+        :returns: Indicates if ABS incurred an error condition. True = Error. False = No Error.
+        :rtype: bool
+        :vss_id: 952 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Antilock Braking System 
+        
+
+
     .. xbr:event:: on_is_active(new_value)
 
         :param new_value: Indicates if ABS is enabled. Tue = Enabled. False = Disabled.
@@ -53,10 +65,34 @@ Antilock Braking System signals.
         :vss_actuator: Antilock Braking System 
 
 
+    .. xbr:procedure:: get_is_active
+
+        :returns: Indicates if ABS is enabled. Tue = Enabled. False = Disabled.
+        :rtype: bool
+        :vss_id: 951 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Antilock Braking System 
+        :vss_actuator: Antilock Braking System 
+
+
     .. xbr:event:: on_is_engaged(new_value)
 
         :param new_value: Indicates if ABS is currently regulating brake pressure. True = Engaged. False = Not Engaged.
         :type new_value: bool
+        :vss_id: 953 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Antilock Braking System 
+        
+
+
+    .. xbr:procedure:: get_is_engaged
+
+        :returns: Indicates if ABS is currently regulating brake pressure. True = Engaged. False = Not Engaged.
+        :rtype: bool
         :vss_id: 953 
         
         :vss_type: Boolean 
@@ -86,6 +122,18 @@ Signals from Cruise Control system.
         
 
 
+    .. xbr:procedure:: get_error
+
+        :returns: Indicates if cruise control system incurred and error condition. True = Error. False = NoError.
+        :rtype: bool
+        :vss_id: 941 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Cruise Control System 
+        
+
+
     .. xbr:event:: on_is_active(new_value)
 
         :param new_value: Indicates if cruise control system is enabled. True = Enabled. False = Disabled.
@@ -98,10 +146,34 @@ Signals from Cruise Control system.
         :vss_actuator: Cruise Control System 
 
 
+    .. xbr:procedure:: get_is_active
+
+        :returns: Indicates if cruise control system is enabled. True = Enabled. False = Disabled.
+        :rtype: bool
+        :vss_id: 939 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Cruise Control System 
+        :vss_actuator: Cruise Control System 
+
+
     .. xbr:event:: on_speed_set(new_value)
 
         :param new_value: Set cruise control speed in kilometers per hour
         :type new_value: int
+        :vss_id: 940 
+        
+        :vss_type: Int32 
+        :vss_unit: km/h 
+        :vss_sensor: Cruise Control System 
+        :vss_actuator: Cruise Control System 
+
+
+    .. xbr:procedure:: get_speed_set
+
+        :returns: Set cruise control speed in kilometers per hour
+        :rtype: int
         :vss_id: 940 
         
         :vss_type: Int32 
@@ -131,6 +203,18 @@ Electronic Stability Control System signals.
         
 
 
+    .. xbr:procedure:: get_error
+
+        :returns: Indicates if ESC incurred an error condition. True = Error. False = No Error.
+        :rtype: bool
+        :vss_id: 958 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Electronic Stability Control System 
+        
+
+
     .. xbr:event:: on_is_active(new_value)
 
         :param new_value: Indicates if ECS is enabled. Tue = Enabled. False = Disabled.
@@ -143,10 +227,34 @@ Electronic Stability Control System signals.
         :vss_actuator: Electronic Stability Control System 
 
 
+    .. xbr:procedure:: get_is_active
+
+        :returns: Indicates if ECS is enabled. Tue = Enabled. False = Disabled.
+        :rtype: bool
+        :vss_id: 957 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Electronic Stability Control System 
+        :vss_actuator: Electronic Stability Control System 
+
+
     .. xbr:event:: on_is_engaged(new_value)
 
         :param new_value: Indicates if ESC is currently regulating vehicle stability. True = Engaged. False = Not Engaged.
         :type new_value: bool
+        :vss_id: 959 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Electronic Stability Control System 
+        
+
+
+    .. xbr:procedure:: get_is_engaged
+
+        :returns: Indicates if ESC is currently regulating vehicle stability. True = Engaged. False = Not Engaged.
+        :rtype: bool
         :vss_id: 959 
         
         :vss_type: Boolean 
@@ -176,6 +284,18 @@ Signals from Land Departure Detection System.
         
 
 
+    .. xbr:procedure:: get_error
+
+        :returns: Indicates if lane departure system incurred an error condition. True = Error. False = No Error.
+        :rtype: bool
+        :vss_id: 944 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Lane Departure Detection Sensor 
+        
+
+
     .. xbr:event:: on_is_active(new_value)
 
         :param new_value: Indicates if lane departure detection system is enabled. True = Enabled. False = Disabled.
@@ -188,10 +308,34 @@ Signals from Land Departure Detection System.
         :vss_actuator: Lane Departure Detection Sensor 
 
 
+    .. xbr:procedure:: get_is_active
+
+        :returns: Indicates if lane departure detection system is enabled. True = Enabled. False = Disabled.
+        :rtype: bool
+        :vss_id: 942 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Lane Departure Detection Sensor 
+        :vss_actuator: Lane Departure Detection Sensor 
+
+
     .. xbr:event:: on_warning(new_value)
 
         :param new_value: Indicates if lane departure detection registered a lane departure
         :type new_value: bool
+        :vss_id: 943 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Lane Departure Detection Sensor 
+        
+
+
+    .. xbr:procedure:: get_warning
+
+        :returns: Indicates if lane departure detection registered a lane departure
+        :rtype: bool
         :vss_id: 943 
         
         :vss_type: Boolean 
@@ -221,10 +365,34 @@ Signals form Obstacle Sensor System.
         
 
 
+    .. xbr:procedure:: get_distance_to_object_front_left
+
+        :returns: Front left distance to object in meters
+        :rtype: int
+        :vss_id: 1133 
+        
+        :vss_type: UInt16 
+        :vss_unit: m 
+        :vss_sensor: Obstacle Detection Sensor 
+        
+
+
     .. xbr:event:: on_distance_to_object_front_right(new_value)
 
         :param new_value: Front right distance to object in meters
         :type new_value: int
+        :vss_id: 1134 
+        
+        :vss_type: UInt16 
+        :vss_unit: m 
+        :vss_sensor: Obstacle Detection Sensor 
+        
+
+
+    .. xbr:procedure:: get_distance_to_object_front_right
+
+        :returns: Front right distance to object in meters
+        :rtype: int
         :vss_id: 1134 
         
         :vss_type: UInt16 
@@ -245,10 +413,34 @@ Signals form Obstacle Sensor System.
         
 
 
+    .. xbr:procedure:: get_distance_to_object_rear_left
+
+        :returns: Rear left distance to object in meters
+        :rtype: int
+        :vss_id: 1135 
+        
+        :vss_type: UInt16 
+        :vss_unit: m 
+        :vss_sensor: Obstacle Detection Sensor 
+        
+
+
     .. xbr:event:: on_distance_to_object_rear_right(new_value)
 
         :param new_value: Rear right distance to object in meters
         :type new_value: int
+        :vss_id: 1136 
+        
+        :vss_type: UInt16 
+        :vss_unit: m 
+        :vss_sensor: Obstacle Detection Sensor 
+        
+
+
+    .. xbr:procedure:: get_distance_to_object_rear_right
+
+        :returns: Rear right distance to object in meters
+        :rtype: int
         :vss_id: 1136 
         
         :vss_type: UInt16 
@@ -269,10 +461,34 @@ Signals form Obstacle Sensor System.
         
 
 
+    .. xbr:procedure:: get_error
+
+        :returns: Indicates if obstacle sensor system incurred an error condition. True = Error. False = No Error.
+        :rtype: bool
+        :vss_id: 1132 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Obstacle Detection Sensor 
+        
+
+
     .. xbr:event:: on_is_active(new_value)
 
         :param new_value: Indicates if obstacle sensor system is enabled. Tue = Enabled. False = Disabled.
         :type new_value: bool
+        :vss_id: 1131 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Obstacle Detection Sensor 
+        :vss_actuator: Obstacle Detection Sensor 
+
+
+    .. xbr:procedure:: get_is_active
+
+        :returns: Indicates if obstacle sensor system is enabled. Tue = Enabled. False = Disabled.
+        :rtype: bool
         :vss_id: 1131 
         
         :vss_type: Boolean 
@@ -302,6 +518,18 @@ Traction Control System signals.
         
 
 
+    .. xbr:procedure:: get_error
+
+        :returns: Indicates if TCS incurred an error condition. True = Error. False = No Error.
+        :rtype: bool
+        :vss_id: 955 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Traction Control System 
+        
+
+
     .. xbr:event:: on_is_active(new_value)
 
         :param new_value: Indicates if TCS is enabled. Tue = Enabled. False = Disabled.
@@ -314,10 +542,34 @@ Traction Control System signals.
         :vss_actuator: Traction Control System 
 
 
+    .. xbr:procedure:: get_is_active
+
+        :returns: Indicates if TCS is enabled. Tue = Enabled. False = Disabled.
+        :rtype: bool
+        :vss_id: 954 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Traction Control System 
+        :vss_actuator: Traction Control System 
+
+
     .. xbr:event:: on_is_engaged(new_value)
 
         :param new_value: Indicates if TCS is currently regulating traction. True = Engaged. False = Not Engaged.
         :type new_value: bool
+        :vss_id: 956 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Traction Control System 
+        
+
+
+    .. xbr:procedure:: get_is_engaged
+
+        :returns: Indicates if TCS is currently regulating traction. True = Engaged. False = Not Engaged.
+        :rtype: bool
         :vss_id: 956 
         
         :vss_type: Boolean 

@@ -40,6 +40,18 @@ Hood status.
         :vss_sensor: Hood Latch 
         :vss_actuator: Hood Latch 
 
+
+    .. xbr:procedure:: get_is_open
+
+        :returns: hood open or closed. True = Open. False = Closed
+        :rtype: bool
+        :vss_id: 83 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Hood Latch 
+        :vss_actuator: Hood Latch 
+
 IHorn
 -----
 
@@ -54,6 +66,18 @@ Horn signals.
 
         :param new_value: Horn active or inactive. True = Active. False = Inactive.
         :type new_value: bool
+        :vss_id: 86 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Horn System 
+        :vss_actuator: Horn System 
+
+
+    .. xbr:procedure:: get_is_active
+
+        :returns: Horn active or inactive. True = Active. False = Inactive.
+        :rtype: bool
         :vss_id: 86 
         
         :vss_type: Boolean 
@@ -83,10 +107,34 @@ All lights.
         :vss_actuator: Backup Light 
 
 
+    .. xbr:procedure:: get_is_backup_on
+
+        :returns: Is backup (reverse) light on
+        :rtype: bool
+        :vss_id: 99 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Backup Light Switch 
+        :vss_actuator: Backup Light 
+
+
     .. xbr:event:: on_is_brake_on(new_value)
 
         :param new_value: Is brake light on
         :type new_value: bool
+        :vss_id: 101 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Light Switch 
+        :vss_actuator: Brake Light 
+
+
+    .. xbr:procedure:: get_is_brake_on
+
+        :returns: Is brake light on
+        :rtype: bool
         :vss_id: 101 
         
         :vss_type: Boolean 
@@ -107,10 +155,34 @@ All lights.
         :vss_actuator: Front Fog Light 
 
 
+    .. xbr:procedure:: get_is_front_fog_on
+
+        :returns: Is front fog light on
+        :rtype: bool
+        :vss_id: 103 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Front Fog Light Switch 
+        :vss_actuator: Front Fog Light 
+
+
     .. xbr:event:: on_is_hazard_on(new_value)
 
         :param new_value: Are hazards on
         :type new_value: bool
+        :vss_id: 104 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Hazard Light Switch 
+        :vss_actuator: Hazard Light 
+
+
+    .. xbr:procedure:: get_is_hazard_on
+
+        :returns: Are hazards on
+        :rtype: bool
         :vss_id: 104 
         
         :vss_type: Boolean 
@@ -131,10 +203,34 @@ All lights.
         :vss_actuator: High Beam Light 
 
 
+    .. xbr:procedure:: get_is_high_beam_on
+
+        :returns: Is high beam on
+        :rtype: bool
+        :vss_id: 96 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: High Beam Light Switch 
+        :vss_actuator: High Beam Light 
+
+
     .. xbr:event:: on_is_left_indicator_on(new_value)
 
         :param new_value: Is left indicator flashing
         :type new_value: bool
+        :vss_id: 105 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Left Indicator Switch 
+        :vss_actuator: Left Indicator Light 
+
+
+    .. xbr:procedure:: get_is_left_indicator_on
+
+        :returns: Is left indicator flashing
+        :rtype: bool
         :vss_id: 105 
         
         :vss_type: Boolean 
@@ -155,10 +251,34 @@ All lights.
         :vss_actuator: Low Beam Light 
 
 
+    .. xbr:procedure:: get_is_low_beam_on
+
+        :returns: Is low beam on
+        :rtype: bool
+        :vss_id: 97 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Low Beam Light Switch 
+        :vss_actuator: Low Beam Light 
+
+
     .. xbr:event:: on_is_parking_on(new_value)
 
         :param new_value: Is parking light on
         :type new_value: bool
+        :vss_id: 100 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Parking Light Switch 
+        :vss_actuator: Parking Light 
+
+
+    .. xbr:procedure:: get_is_parking_on
+
+        :returns: Is parking light on
+        :rtype: bool
         :vss_id: 100 
         
         :vss_type: Boolean 
@@ -179,6 +299,18 @@ All lights.
         :vss_actuator: Rear Fog Light 
 
 
+    .. xbr:procedure:: get_is_rear_fog_on
+
+        :returns: Is rear fog light on
+        :rtype: bool
+        :vss_id: 102 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Rear Fog Light Switch 
+        :vss_actuator: Rear Fog Light 
+
+
     .. xbr:event:: on_is_right_indicator_on(new_value)
 
         :param new_value: Is right indicator flashing
@@ -191,10 +323,34 @@ All lights.
         :vss_actuator: Right Indicator Light 
 
 
+    .. xbr:procedure:: get_is_right_indicator_on
+
+        :returns: Is right indicator flashing
+        :rtype: bool
+        :vss_id: 106 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Right Indicator Switch 
+        :vss_actuator: Right Indicator Light 
+
+
     .. xbr:event:: on_is_running_on(new_value)
 
         :param new_value: Are running lights on
         :type new_value: bool
+        :vss_id: 98 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Running Light Switch 
+        :vss_actuator: Running Light 
+
+
+    .. xbr:procedure:: get_is_running_on
+
+        :returns: Are running lights on
+        :rtype: bool
         :vss_id: 98 
         
         :vss_type: Boolean 
@@ -224,10 +380,34 @@ All mirrors.
         :vss_actuator: Mirror heater 
 
 
+    .. xbr:procedure:: get_left_heating_status
+
+        :returns: Mirror Heater on or off. True = Heater On. False = Heater Off.
+        :rtype: bool
+        :vss_id: 1127 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Mirror heater 
+        :vss_actuator: Mirror heater 
+
+
     .. xbr:event:: on_left_pan(new_value)
 
         :param new_value: Mirror pan as a percent. 0 = Center Position. 100 = Fully Left Position. -100 = Fully Right Position.
         :type new_value: int
+        :vss_id: 108 
+        
+        :vss_type: Int8 
+        :vss_unit: percent 
+        :vss_sensor: Mirror Pan Sensor 
+        :vss_actuator: Mirror Pan Actuator 
+
+
+    .. xbr:procedure:: get_left_pan
+
+        :returns: Mirror pan as a percent. 0 = Center Position. 100 = Fully Left Position. -100 = Fully Right Position.
+        :rtype: int
         :vss_id: 108 
         
         :vss_type: Int8 
@@ -248,10 +428,34 @@ All mirrors.
         :vss_actuator: Mirror Tilt Actuator 
 
 
+    .. xbr:procedure:: get_left_tilt
+
+        :returns: Mirror tilt as a percent. 0 = Center Position. 100 = Fully Upward Position. -100 = Fully Downward Position.
+        :rtype: int
+        :vss_id: 107 
+        
+        :vss_type: Int8 
+        :vss_unit: percent 
+        :vss_sensor: Mirror Tilt Sensor 
+        :vss_actuator: Mirror Tilt Actuator 
+
+
     .. xbr:event:: on_right_heating_status(new_value)
 
         :param new_value: Mirror Heater on or off. True = Heater On. False = Heater Off.
         :type new_value: bool
+        :vss_id: 1128 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Mirror heater 
+        :vss_actuator: Mirror heater 
+
+
+    .. xbr:procedure:: get_right_heating_status
+
+        :returns: Mirror Heater on or off. True = Heater On. False = Heater Off.
+        :rtype: bool
         :vss_id: 1128 
         
         :vss_type: Boolean 
@@ -272,10 +476,34 @@ All mirrors.
         :vss_actuator: Mirror Pan Actuator 
 
 
+    .. xbr:procedure:: get_right_pan
+
+        :returns: Mirror pan as a percent. 0 = Center Position. 100 = Fully Left Position. -100 = Fully Right Position.
+        :rtype: int
+        :vss_id: 111 
+        
+        :vss_type: Int8 
+        :vss_unit: percent 
+        :vss_sensor: Mirror Pan Sensor 
+        :vss_actuator: Mirror Pan Actuator 
+
+
     .. xbr:event:: on_right_tilt(new_value)
 
         :param new_value: Mirror tilt as a percent. 0 = Center Position. 100 = Fully Upward Position. -100 = Fully Downward Position.
         :type new_value: int
+        :vss_id: 110 
+        
+        :vss_type: Int8 
+        :vss_unit: percent 
+        :vss_sensor: Mirror Tilt Sensor 
+        :vss_actuator: Mirror Tilt Actuator 
+
+
+    .. xbr:procedure:: get_right_tilt
+
+        :returns: Mirror tilt as a percent. 0 = Center Position. 100 = Fully Upward Position. -100 = Fully Downward Position.
+        :rtype: int
         :vss_id: 110 
         
         :vss_type: Int8 
@@ -297,6 +525,18 @@ Rainsensor signals.
 
         :param new_value: Rain intensity. 0 = Dry, No Rain. 100 = Covered.
         :type new_value: int
+        :vss_id: 1122 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Rain Sensor 
+        
+
+
+    .. xbr:procedure:: get_intensity
+
+        :returns: Rain intensity. 0 = Dry, No Rain. 100 = Covered.
+        :rtype: int
         :vss_id: 1122 
         
         :vss_type: UInt8 
@@ -326,10 +566,34 @@ Trunk status.
         :vss_actuator: Trunk Lock 
 
 
+    .. xbr:procedure:: get_is_locked
+
+        :returns: Is trunk locked or unlocked. True = Locked. False = Unlocked.
+        :rtype: bool
+        :vss_id: 85 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Trunk Lock 
+        :vss_actuator: Trunk Lock 
+
+
     .. xbr:event:: on_is_open(new_value)
 
         :param new_value: Trunk open or closed. True = Open. False = Closed
         :type new_value: bool
+        :vss_id: 84 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Trunk Latch 
+        :vss_actuator: Trunk Latch 
+
+
+    .. xbr:procedure:: get_is_open
+
+        :returns: Trunk open or closed. True = Open. False = Closed
+        :rtype: bool
         :vss_id: 84 
         
         :vss_type: Boolean 
@@ -359,10 +623,34 @@ Windshield signals.
         :vss_actuator: Windshield Heater 
 
 
+    .. xbr:procedure:: get_front_heating_status
+
+        :returns: Front windshield heater status. 0 - off, 1 - on
+        :rtype: bool
+        :vss_id: 1124 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Windshield Heater Switch 
+        :vss_actuator: Windshield Heater 
+
+
     .. xbr:event:: on_front_washer_fluid_level(new_value)
 
         :param new_value: Washer fluid level as a percent. 0 = Empty. 100 = Full.
         :type new_value: int
+        :vss_id: 91 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Washer Fuild Level Sensor 
+        
+
+
+    .. xbr:procedure:: get_front_washer_fluid_level
+
+        :returns: Washer fluid level as a percent. 0 = Empty. 100 = Full.
+        :rtype: int
         :vss_id: 91 
         
         :vss_type: UInt8 
@@ -383,10 +671,34 @@ Windshield signals.
         
 
 
+    .. xbr:procedure:: get_front_washer_fluid_level_low
+
+        :returns: Low level indication for washer fluid. True = Level Low. False = Level OK.
+        :rtype: bool
+        :vss_id: 90 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Washer Fuild Level Sensor 
+        
+
+
     .. xbr:event:: on_front_wiping_status(new_value)
 
         :param new_value: Front wiper status
         :type new_value: str
+        :vss_id: 1123 
+        :vss_enum: ['off', 'slow', 'medium', 'fast', 'interval', 'rainsensor'] 
+        :vss_type: String 
+        
+        :vss_sensor: Wiper Switch 
+        :vss_actuator: Wiper 
+
+
+    .. xbr:procedure:: get_front_wiping_status
+
+        :returns: Front wiper status
+        :rtype: str
         :vss_id: 1123 
         :vss_enum: ['off', 'slow', 'medium', 'fast', 'interval', 'rainsensor'] 
         :vss_type: String 
@@ -407,10 +719,34 @@ Windshield signals.
         :vss_actuator: Windshield Heater 
 
 
+    .. xbr:procedure:: get_rear_heating_status
+
+        :returns: Rear windshield heater status. 0 - off, 1 - on
+        :rtype: bool
+        :vss_id: 1126 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Windshield Heater Switch 
+        :vss_actuator: Windshield Heater 
+
+
     .. xbr:event:: on_rear_washer_fluid_level(new_value)
 
         :param new_value: Washer fluid level as a percent. 0 = Empty. 100 = Full.
         :type new_value: int
+        :vss_id: 95 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Washer Fuild Level Sensor 
+        
+
+
+    .. xbr:procedure:: get_rear_washer_fluid_level
+
+        :returns: Washer fluid level as a percent. 0 = Empty. 100 = Full.
+        :rtype: int
         :vss_id: 95 
         
         :vss_type: UInt8 
@@ -431,10 +767,34 @@ Windshield signals.
         
 
 
+    .. xbr:procedure:: get_rear_washer_fluid_level_low
+
+        :returns: Low level indication for washer fluid. True = Level Low. False = Level OK.
+        :rtype: bool
+        :vss_id: 94 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Washer Fuild Level Sensor 
+        
+
+
     .. xbr:event:: on_rear_wiping_status(new_value)
 
         :param new_value: Rear wiper status
         :type new_value: str
+        :vss_id: 1125 
+        :vss_enum: ['off', 'slow', 'medium', 'fast', 'interval', 'rainsensor'] 
+        :vss_type: String 
+        
+        :vss_sensor: Wiper Switch 
+        :vss_actuator: Wiper 
+
+
+    .. xbr:procedure:: get_rear_wiping_status
+
+        :returns: Rear wiper status
+        :rtype: str
         :vss_id: 1125 
         :vss_enum: ['off', 'slow', 'medium', 'fast', 'interval', 'rainsensor'] 
         :vss_type: String 

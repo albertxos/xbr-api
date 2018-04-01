@@ -40,6 +40,18 @@ Accelerator signals.
         :vss_sensor: Pedal Position Sensor 
         
 
+
+    .. xbr:procedure:: get_pedal_position
+
+        :returns: Accelerator pedal position as percent. 0 = Not depressed. 100 = Fully depressed.
+        :rtype: int
+        :vss_id: 992 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Pedal Position Sensor 
+        
+
 IAxle
 -----
 
@@ -62,10 +74,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row1_wheel_left_brake_brakes_worn
+
+        :returns: Brake pad wear status. True = Worn. False = Not Worn.
+        :rtype: bool
+        :vss_id: 963 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
     .. xbr:event:: on_row1_wheel_left_brake_fluid_level(new_value)
 
         :param new_value: Brake fluid level as percent. 0 = Empty. 100 = Full.
         :type new_value: int
+        :vss_id: 960 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
+    .. xbr:procedure:: get_row1_wheel_left_brake_fluid_level
+
+        :returns: Brake fluid level as percent. 0 = Empty. 100 = Full.
+        :rtype: int
         :vss_id: 960 
         
         :vss_type: UInt8 
@@ -86,10 +122,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row1_wheel_left_brake_fluid_level_low
+
+        :returns: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
+        :rtype: bool
+        :vss_id: 961 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
     .. xbr:event:: on_row1_wheel_left_brake_pad_wear(new_value)
 
         :param new_value: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
         :type new_value: int
+        :vss_id: 962 
+        
+        :vss_type: UInt8 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
+    .. xbr:procedure:: get_row1_wheel_left_brake_pad_wear
+
+        :returns: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
+        :rtype: int
         :vss_id: 962 
         
         :vss_type: UInt8 
@@ -110,10 +170,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row1_wheel_left_tire_pressure
+
+        :returns: Tire pressure in kilo-Pascal
+        :rtype: int
+        :vss_id: 964 
+        
+        :vss_type: UInt8 
+        :vss_unit: kpa 
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
     .. xbr:event:: on_row1_wheel_left_tire_pressure_low(new_value)
 
         :param new_value: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
         :type new_value: bool
+        :vss_id: 965 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
+    .. xbr:procedure:: get_row1_wheel_left_tire_pressure_low
+
+        :returns: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
+        :rtype: bool
         :vss_id: 965 
         
         :vss_type: Boolean 
@@ -134,10 +218,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row1_wheel_left_tire_temperature
+
+        :returns: Tire temperature in Celsius.
+        :rtype: float
+        :vss_id: 966 
+        
+        :vss_type: Float 
+        :vss_unit: celsius 
+        :vss_sensor: Tire Temperature Sensor 
+        
+
+
     .. xbr:event:: on_row1_wheel_right_brake_brakes_worn(new_value)
 
         :param new_value: Brake pad wear status. True = Worn. False = Not Worn.
         :type new_value: bool
+        :vss_id: 970 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
+    .. xbr:procedure:: get_row1_wheel_right_brake_brakes_worn
+
+        :returns: Brake pad wear status. True = Worn. False = Not Worn.
+        :rtype: bool
         :vss_id: 970 
         
         :vss_type: Boolean 
@@ -158,10 +266,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row1_wheel_right_brake_fluid_level
+
+        :returns: Brake fluid level as percent. 0 = Empty. 100 = Full.
+        :rtype: int
+        :vss_id: 967 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
     .. xbr:event:: on_row1_wheel_right_brake_fluid_level_low(new_value)
 
         :param new_value: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
         :type new_value: bool
+        :vss_id: 968 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
+    .. xbr:procedure:: get_row1_wheel_right_brake_fluid_level_low
+
+        :returns: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
+        :rtype: bool
         :vss_id: 968 
         
         :vss_type: Boolean 
@@ -182,10 +314,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row1_wheel_right_brake_pad_wear
+
+        :returns: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
+        :rtype: int
+        :vss_id: 969 
+        
+        :vss_type: UInt8 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
     .. xbr:event:: on_row1_wheel_right_tire_pressure(new_value)
 
         :param new_value: Tire pressure in kilo-Pascal
         :type new_value: int
+        :vss_id: 971 
+        
+        :vss_type: UInt8 
+        :vss_unit: kpa 
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
+    .. xbr:procedure:: get_row1_wheel_right_tire_pressure
+
+        :returns: Tire pressure in kilo-Pascal
+        :rtype: int
         :vss_id: 971 
         
         :vss_type: UInt8 
@@ -206,10 +362,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row1_wheel_right_tire_pressure_low
+
+        :returns: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
+        :rtype: bool
+        :vss_id: 972 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
     .. xbr:event:: on_row1_wheel_right_tire_temperature(new_value)
 
         :param new_value: Tire temperature in Celsius.
         :type new_value: float
+        :vss_id: 973 
+        
+        :vss_type: Float 
+        :vss_unit: celsius 
+        :vss_sensor: Tire Temperature Sensor 
+        
+
+
+    .. xbr:procedure:: get_row1_wheel_right_tire_temperature
+
+        :returns: Tire temperature in Celsius.
+        :rtype: float
         :vss_id: 973 
         
         :vss_type: Float 
@@ -230,10 +410,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row2_wheel_left_brake_brakes_worn
+
+        :returns: Brake pad wear status. True = Worn. False = Not Worn.
+        :rtype: bool
+        :vss_id: 977 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
     .. xbr:event:: on_row2_wheel_left_brake_fluid_level(new_value)
 
         :param new_value: Brake fluid level as percent. 0 = Empty. 100 = Full.
         :type new_value: int
+        :vss_id: 974 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
+    .. xbr:procedure:: get_row2_wheel_left_brake_fluid_level
+
+        :returns: Brake fluid level as percent. 0 = Empty. 100 = Full.
+        :rtype: int
         :vss_id: 974 
         
         :vss_type: UInt8 
@@ -254,10 +458,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row2_wheel_left_brake_fluid_level_low
+
+        :returns: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
+        :rtype: bool
+        :vss_id: 975 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
     .. xbr:event:: on_row2_wheel_left_brake_pad_wear(new_value)
 
         :param new_value: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
         :type new_value: int
+        :vss_id: 976 
+        
+        :vss_type: UInt8 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
+    .. xbr:procedure:: get_row2_wheel_left_brake_pad_wear
+
+        :returns: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
+        :rtype: int
         :vss_id: 976 
         
         :vss_type: UInt8 
@@ -278,10 +506,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row2_wheel_left_tire_pressure
+
+        :returns: Tire pressure in kilo-Pascal
+        :rtype: int
+        :vss_id: 978 
+        
+        :vss_type: UInt8 
+        :vss_unit: kpa 
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
     .. xbr:event:: on_row2_wheel_left_tire_pressure_low(new_value)
 
         :param new_value: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
         :type new_value: bool
+        :vss_id: 979 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
+    .. xbr:procedure:: get_row2_wheel_left_tire_pressure_low
+
+        :returns: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
+        :rtype: bool
         :vss_id: 979 
         
         :vss_type: Boolean 
@@ -302,10 +554,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row2_wheel_left_tire_temperature
+
+        :returns: Tire temperature in Celsius.
+        :rtype: float
+        :vss_id: 980 
+        
+        :vss_type: Float 
+        :vss_unit: celsius 
+        :vss_sensor: Tire Temperature Sensor 
+        
+
+
     .. xbr:event:: on_row2_wheel_right_brake_brakes_worn(new_value)
 
         :param new_value: Brake pad wear status. True = Worn. False = Not Worn.
         :type new_value: bool
+        :vss_id: 984 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
+    .. xbr:procedure:: get_row2_wheel_right_brake_brakes_worn
+
+        :returns: Brake pad wear status. True = Worn. False = Not Worn.
+        :rtype: bool
         :vss_id: 984 
         
         :vss_type: Boolean 
@@ -326,10 +602,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row2_wheel_right_brake_fluid_level
+
+        :returns: Brake fluid level as percent. 0 = Empty. 100 = Full.
+        :rtype: int
+        :vss_id: 981 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
     .. xbr:event:: on_row2_wheel_right_brake_fluid_level_low(new_value)
 
         :param new_value: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
         :type new_value: bool
+        :vss_id: 982 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Brake Fluid Level Sensor 
+        
+
+
+    .. xbr:procedure:: get_row2_wheel_right_brake_fluid_level_low
+
+        :returns: Brake fluid level status. True = Brake fluid level low. False = Brake fluid level OK.
+        :rtype: bool
         :vss_id: 982 
         
         :vss_type: Boolean 
@@ -350,10 +650,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row2_wheel_right_brake_pad_wear
+
+        :returns: Brake pad wear as percent. 0 = No Wear. 100 = Worn.
+        :rtype: int
+        :vss_id: 983 
+        
+        :vss_type: UInt8 
+        
+        :vss_sensor: Brake Pad Wear Sensor 
+        
+
+
     .. xbr:event:: on_row2_wheel_right_tire_pressure(new_value)
 
         :param new_value: Tire pressure in kilo-Pascal
         :type new_value: int
+        :vss_id: 985 
+        
+        :vss_type: UInt8 
+        :vss_unit: kpa 
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
+    .. xbr:procedure:: get_row2_wheel_right_tire_pressure
+
+        :returns: Tire pressure in kilo-Pascal
+        :rtype: int
         :vss_id: 985 
         
         :vss_type: UInt8 
@@ -374,10 +698,34 @@ Axle signals.
         
 
 
+    .. xbr:procedure:: get_row2_wheel_right_tire_pressure_low
+
+        :returns: Tire Pressure Status. True = Low tire pressure. False = Good tire pressure.
+        :rtype: bool
+        :vss_id: 986 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Tire Pressure Monitoring System 
+        
+
+
     .. xbr:event:: on_row2_wheel_right_tire_temperature(new_value)
 
         :param new_value: Tire temperature in Celsius.
         :type new_value: float
+        :vss_id: 987 
+        
+        :vss_type: Float 
+        :vss_unit: celsius 
+        :vss_sensor: Tire Temperature Sensor 
+        
+
+
+    .. xbr:procedure:: get_row2_wheel_right_tire_temperature
+
+        :returns: Tire temperature in Celsius.
+        :rtype: float
         :vss_id: 987 
         
         :vss_type: Float 
@@ -406,6 +754,18 @@ Brake system signals.
         :vss_sensor: Pedal Position Sensor 
         
 
+
+    .. xbr:procedure:: get_pedal_position
+
+        :returns: Brake pedal position as percent. 0 = Not depressed. 100 = Fully depressed.
+        :rtype: int
+        :vss_id: 993 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Pedal Position Sensor 
+        
+
 IParkingBrake
 -------------
 
@@ -420,6 +780,18 @@ Parking brake signals.
 
         :param new_value: Parking brake status. True = Parking Brake is Engaged. False = Parking Brake is not Engaged.
         :type new_value: bool
+        :vss_id: 988 
+        
+        :vss_type: Boolean 
+        
+        :vss_sensor: Parking Brake Sensor 
+        :vss_actuator: Parking Brake Switch 
+
+
+    .. xbr:procedure:: get_is_engaged
+
+        :returns: Parking brake status. True = Parking Brake is Engaged. False = Parking Brake is not Engaged.
+        :rtype: bool
         :vss_id: 988 
         
         :vss_type: Boolean 
@@ -449,6 +821,18 @@ Steering wheel signals.
         
 
 
+    .. xbr:procedure:: get_angle
+
+        :returns: Steering wheel angle. Positive = degrees to the left. Negative = degrees to the right.
+        :rtype: int
+        :vss_id: 989 
+        
+        :vss_type: Int16 
+        :vss_unit: degrees 
+        :vss_sensor: Steering Wheel Angle Sensor 
+        
+
+
     .. xbr:event:: on_extension(new_value)
 
         :param new_value: Steering wheel column extension from dashboard. 0 = Closest to dashboard. 100 = Furthest from dashboard.
@@ -461,10 +845,34 @@ Steering wheel signals.
         :vss_actuator: Steering Wheel Position Actuator 
 
 
+    .. xbr:procedure:: get_extension
+
+        :returns: Steering wheel column extension from dashboard. 0 = Closest to dashboard. 100 = Furthest from dashboard.
+        :rtype: int
+        :vss_id: 991 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Steering Wheel Position Sensor 
+        :vss_actuator: Steering Wheel Position Actuator 
+
+
     .. xbr:event:: on_tilt(new_value)
 
         :param new_value: Steering wheel column tilt. 0 = Lowest position. 100 = Highest position.
         :type new_value: int
+        :vss_id: 990 
+        
+        :vss_type: UInt8 
+        :vss_unit: percent 
+        :vss_sensor: Steering Wheel Position Sensor 
+        :vss_actuator: Steering Wheel Position Actuator 
+
+
+    .. xbr:procedure:: get_tilt
+
+        :returns: Steering wheel column tilt. 0 = Lowest position. 100 = Highest position.
+        :rtype: int
         :vss_id: 990 
         
         :vss_type: UInt8 
