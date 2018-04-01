@@ -108,7 +108,7 @@ with open(INPUT_SPEC) as fd:
     data = json.load(fd)
 
 nss = data['Signal']['children']
-for ns, ns_data in nss.items():
+for ns, ns_data in sorted(nss.items()):
     CNT_NAMESPACES += 1
     ns_name = ns.lower()
     ns_file = os.path.join(OUTPUT_DIR, '{}.rst'.format(ns_name))
@@ -129,7 +129,7 @@ for ns, ns_data in nss.items():
         if ns in ['OBD', 'Vehicle']:
             ifcs = {ns: {'children': ifcs}}
 
-        for ifc, ifc_data in ifcs.items():
+        for ifc, ifc_data in sorted(ifcs.items()):
             CNT_INTERFACES += 1
             if True:
                 #
@@ -155,7 +155,7 @@ for ns, ns_data in nss.items():
             evts = []
             recurse([], ifc_data, evts)
 
-            for evt, evt_data in evts:
+            for evt, evt_data in sorted(evts):
                 CNT_EVENTS += 1
 
                 #
