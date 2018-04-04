@@ -20,8 +20,11 @@ requirements_pip:
 clean:
 	-rm -rf ./_build
 
-build:
+build_html:
 	sphinx-build -b html . _build
+
+build_xbr:
+	sphinx-build -b xbr . _build
 
 # https://s3.eu-central-1.amazonaws.com/xbr.foundation/api/index.html
 publish:

@@ -1,49 +1,57 @@
 com.example.basic
 =================
 
-Consumer analytics related interfaces.
+A couple of very basic interface examples.
 
 .. xbr:namespace:: com.example.basic
 
 ------------
 
 
-IHelloWorld
------------
+IMath
+-----
 
-Services that implement :xbr:interface:`IHelloWorld` just expose one method that trivially returns a greeting message, and publishes an event.
+.. xbr:interface:: IMath
 
-.. xbr:interface:: IHelloWorld
+    Do some awesome calculations using this interface;)
 
-    Hello world API. The most basic of all;)
+    :version: 1
+    :uuid: 144a86774cab49d58afb947521f315cd
 
-    .. xbr:procedure:: say_hello(name)
+    .. xbr:procedure:: add(x, y)
 
-        Returns a hello message addressed to the given name.
+        Returns the sum of two (integer) numbers.
 
-        :param name: The name of the person to greet.
-        :type name: str
-        :returns: A greeting message.
-        :rtype: str
-        :raises: invalid_name
+        :param x: The first number.
+        :type x: int
+        :param y: The second number.
+        :type y: int
+        :returns: The sum of both numbers.
+        :rtype: int
 
-    .. xbr:event:: on_hello(msg)
+    .. xbr:procedure:: square(x, delay=0)
 
-        Event published when a hello message was sent.
+        Returns the square of an (integer) number.
 
-        :param msg: The greeting message.
-        :type msg: str
+        :param x: The number to square.
+        :type x: int
+        :param delay: Optional delay in seconds before
+            the call returns, to simulate a long running
+            computation.
+        :type delay: int
+        :returns: The square of the number.
+        :rtype: int
 
 
-IUTCTime
---------
+ITime
+-----
 
-Services that implement :xbr:interface:`IUTCTime` just expose one method that returns the current time in UTC, and publish one event per second again
-with the current time.
-
-.. xbr:interface:: IUTCTime
+.. xbr:interface:: ITime
 
     Local service time API.
+
+    Services that implement :xbr:interface:`ITime` just expose one method that returns the current time in UTC, and publish one event per second again
+    with the current time.
 
     :version: 1
     :uuid: 427bffedc63740ffa8d4564560b8a200
@@ -70,3 +78,33 @@ with the current time.
         :param timestamp: Current time in UTC as ISO 8601 string,
             eg ``2018-04-01T20:21:00.877Z``.
         :type timestamp: str
+
+
+IHello
+------
+
+.. xbr:interface:: IHello
+
+    Hello world API. The most basic of all;)
+
+    Services that implement :xbr:interface:`IHello` just expose one method that trivially returns a greeting message, and publishes an event.
+
+    :version: 1
+    :uuid: a7cbf72f44ec4ba38d2031f805f462d6
+
+    .. xbr:procedure:: say_hello(name)
+
+        Returns a hello message addressed to the given name.
+
+        :param name: The name of the person to greet.
+        :type name: str
+        :returns: A greeting message.
+        :rtype: str
+        :raises: invalid_name
+
+    .. xbr:event:: on_hello(msg)
+
+        Event published when a hello message was sent.
+
+        :param msg: The greeting message.
+        :type msg: str

@@ -454,7 +454,7 @@ class XBRInterfacelike(XBRObject):
 
     def get_signature_prefix(self, sig):
         # type: (unicode) -> unicode
-        return self.objtype.capitalize() + ' '
+        return 'XBR {} '.format(self.objtype.capitalize())
 
     def get_index_text(self, nsname, name_ifc):
         # type: (unicode, unicode) -> unicode
@@ -482,7 +482,7 @@ class XBRInterfacemember(XBRObject):
         if self.objtype == 'staticmethod':
             return 'static '
         elif self.objtype in ['interfacemethod', 'event', 'procedure', 'error']:
-            return '{} '.format(self.objtype).capitalize()
+            return 'XBR {} '.format(self.objtype.capitalize())
         return ''
 
     def get_index_text(self, nsname, name_ifc):
@@ -957,9 +957,83 @@ class XBRDomain(Domain):
 
 
 
+from sphinx.builders import Builder
+
+class XBRBuilder(Builder):
+    name = "xbr"
+
+    def init(self):
+        # type: () -> None
+        """Load necessary templates and perform initialization.  The default
+        implementation does nothing.
+        """
+        pass
+
+    def get_outdated_docs(self):
+        # type: () -> Union[unicode, Iterable[unicode]]
+        """Return an iterable of output files that are outdated, or a string
+        describing what an update build will build.
+
+        If the builder does not output individual files corresponding to
+        source files, return a string here.  If it does, return an iterable
+        of those files that need to be written.
+        """
+        print('XBR: get_outdated_docs()')
+        return 'xbr.json'
+
+    def prepare_writing(self, docnames):
+        # type: (Set[unicode]) -> None
+        """A place where you can add logic before :meth:`write_doc` is run"""
+        print('XBR: prepare_writing()')
+
+    def get_target_uri(self, docname, typ=None):
+        # type: (unicode, unicode) -> unicode
+        """Return the target URI for a document name.
+
+        *typ* can be used to qualify the link characteristic for individual
+        builders.
+        """
+        target_uri = 'network.xbr'
+        print('XBR: get_target_uri(docname={}, typ={}) -> {}'.format(docname, typ, target_uri))
+        return target_uri
+
+    def write_doc(self, docname, doctree):
+        # type: (unicode, nodes.Node) -> None
+        """Where you actually write something to the filesystem."""
+        print('XBR: write_doc(docname={}, doctree={})'.format(docname, type(doctree)))
+
+        from pprint import pprint
+        def _print(nodes):
+            for node in nodes:
+                print('\nNODE:', dir(node), node.attributes, node.list_attributes)
+                if 'interface' in str(node):
+                    print(node)
+                #print(node.attributes)
+                #pprint(dir(node))
+            if node.children:
+                print('\nCHILDREN:')
+                _print(node.children)
+
+        _print(doctree)
+
+#        for node in doctree:
+#            print(dir(node), node.attributes)
+#            for child in node.children:
+#                print(dir(child), child.attributes)
+
+    def finish(self):
+        # type: () -> None
+        """Finish the building process.
+
+        The default implementation does nothing.
+        """
+        pass
+
+
 def setup(app):
     # type: (Sphinx) -> Dict[unicode, Any]
     app.add_domain(XBRDomain)
+    app.add_builder(XBRBuilder)
 
     return {
         'version': 'builtin',
@@ -967,3 +1041,8 @@ def setup(app):
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
+
+
+# https://github.com/sphinx-contrib/restbuilder/blob/master/sphinxcontrib/builders/rst.py
+# https://github.com/Arello-Mobile/sphinx-confluence/blob/master/sphinx_confluence/__init__.py
+# https://github.com/cgwrench/rst2md/blob/master/markdown.py

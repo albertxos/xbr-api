@@ -54,7 +54,7 @@ The XBR Service Payment API defines the following WAMP procedures, events and er
             API version (numbered from 1), and the ``service_id`` is the ID of the
             XBR Service implementing this API.
         :param KEY: The call must be encrypted to the public key of the service (for the
-            ``service_id` `), and using the private key of the XBR Consumer.
+            ``service_id``), and using the private key of the XBR Consumer.
         :param RKEY: The call result is encrypted to this public XBR data key, for which
             the XBR Consumer needs to buy the private key.
         :param key_id: The ID of the key to quote a price for.

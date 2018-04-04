@@ -38,8 +38,13 @@ with open('README.rst') as f:
 
 
 setup(
+    name='sphinxcontrib_xbr',
+    description='Sphinx extension for XBR API documentation.',
+    keywords='sphinx xbr crossbar autobahn wamp idl',
+    long_description=README,
     author='Crossbar.io Technologies and contributors',
     author_email='support@crossbario.com',
+    license='MIT License',
     classifiers=[
         'Development Status :: 1 - Alpha/Experimental',
         'Environment :: MacOS X',
@@ -61,15 +66,9 @@ setup(
         'Topic :: Documentation :: Sphinx',
         'Topic :: Software Development :: Documentation',
     ],
-    description='Sphinx extension for XBR API documentation.',
     install_requires=['sphinx'],
-    keywords='sphinx xbr crossbar autobahn wamp idl',
-    license='MIT License',
-    long_description=README,
-    name='sphinxcontrib-xbr',
-    package_data={},
     packages=['sphinxcontrib'],
     url='https://github.com/xbr/xbr-api',
     version=__version__,
-    zip_safe=True,
+    zip_safe=False,
 )
