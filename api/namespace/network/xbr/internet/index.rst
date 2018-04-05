@@ -7,3 +7,4 @@ Internet services.
    :maxdepth: 2
 
    geolocation.rst
+   connectivity.rst

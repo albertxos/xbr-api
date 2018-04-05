@@ -15,6 +15,8 @@ Fork XBR API on `GitHub <https://github.com/xbr/xbr-api>`_ and contribute!
    namespace/com/example/index.rst
    namespace/org/genivi/index.rst
 
+   namespace/guidelines.rst
+
 .. note::
 
     To register an API on XBR API for a given namespace,

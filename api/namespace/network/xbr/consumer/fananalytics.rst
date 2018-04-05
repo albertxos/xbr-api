@@ -1,9 +1,9 @@
-network.xbr.consumer.analytics
-==============================
+network.xbr.consumer.fananalytics
+=================================
 
-Consumer analytics related interfaces.
+Fan profiling and analytics related interfaces.
 
-.. xbr:namespace:: network.xbr.consumer.analytics
+.. xbr:namespace:: network.xbr.consumer.fananalytics
 
 ------------
 
