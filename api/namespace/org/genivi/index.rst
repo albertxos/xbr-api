@@ -12,13 +12,14 @@ Currently, the `Vehicle Signal Specification <https://github.com/GENIVI/vehicle_
 .. note::
 
     The XBR interface description here was auto-generated
-    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_
-    from the
-    `Vehicle Signaling Specification (VSS) <https://github.com/GENIVI/vehicle_signal_specification>`_.
+    `using a script <https://github.com/xbr/xbr-api/tree/master/extern/vss>`_ we've written that
+    was fed JSON data from the
+    `Vehicle Signaling Specification (VSS) repository <https://github.com/GENIVI/vehicle_signal_specification>`_.
     The VSS is
     `licensed <https://raw.githubusercontent.com/GENIVI/vehicle_signal_specification/master/LICENSE>`_
-    under the Mozilla Public License 2.0, and the auto-generated files in this
-    repository should be considered derived works.
+    under the Mozilla Public License 2.0 and the auto-generated sections in the ``*.rst`` files
+    in the ``vss`` folder with APIs in the ``org.genivi.vss`` namespace should be considered
+    "derived work".
     If you have improvements for or have found a bug in the APIs of namespace
     ``org.genivi.vss``, please head over to
     `GENIVIs issue tracker <https://github.com/GENIVI/vehicle_signal_specification/issues>`_.

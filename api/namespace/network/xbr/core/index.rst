@@ -14,6 +14,7 @@ While the former can be chosen freely by the XBR Provider of the data service, t
 .. toctree::
    :maxdepth: 2
 
+   intro.rst
    consumer.rst
    provider.rst
    market.rst
