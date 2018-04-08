@@ -15,6 +15,7 @@ While the former can be chosen freely by the XBR Provider of the data service, t
    :maxdepth: 2
 
    intro.rst
+   common.rst
    consumer.rst
    provider.rst
    market.rst

@@ -7,7 +7,6 @@ End user application usage monitoring and reporting interfaces.
 
 ------------
 
-
 IAppUsageMonitor
 ----------------
 
@@ -16,6 +15,35 @@ IAppUsageMonitor
     A service that implements the application usage monitor API
     monitors and provides access to the application usage on
     the (individual) end user device is running on.
+
+    .. xbr:procedure:: get_running_apps(top=5, sort="cpu")
+
+        Return top N currently running apps, sorted by CPU load
+        or memory, for example, with ``top=1``:
+
+        .. code-block:: json
+
+            [
+                {
+                    "executable": "chromium-browser",
+                    "package": "chromium-browser",
+                    "cpu": 23.43,
+                    "memory": 123901344
+                }
+            ]
+
+        The returned data does *not* reveal sensitive data like fully
+        qualified filesystem paths, or local user names.
+
+        :param top: Only return the top N running apps sorted
+            by ``sort``.
+        :type top: int
+        :param sort: Sort by either ``"cpu"`` or by ``"memory"``
+            incurred by the app
+        :type sort: str
+        :returns: A list (of length ``top``) of dicts as in the
+            example above.
+        :rtype: list
 
 
 IAppUsageReport

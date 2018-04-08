@@ -8,10 +8,10 @@ IP geolocation related interfaces.
 ------------
 
 
-IIPGeolocator
--------------
+IPGeoLocator
+------------
 
-.. xbr:interface:: IIPGeolocator
+.. xbr:interface:: IPGeoLocator
 
     IP geolocation API. This services allows to find information about
     the geographic location (eg country, state or city) given an IP
@@ -26,3 +26,22 @@ IIPGeolocator
         :returns: Location details.
         :rtype: dict
         :raises: no_location_info
+
+
+IPGeoRevealer
+-------------
+
+.. xbr:interface:: IPGeoRevealer
+
+    .. xbr:procedure:: reveal()
+
+        Lookup IPv4 address and return location information.
+
+        * IPv4 subnet (*) of public device IP on Internet connection
+        * device location (resolution 1 km (*))
+        * device local time and timezone
+
+        The limitation of the resolution of the device IP address to
+        a whole subnet (which usually carries many devices), and to
+        the spatial, geographic resolution of 1 km avoids personal
+        information leakage.

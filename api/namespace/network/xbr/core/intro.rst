@@ -26,10 +26,13 @@ We will first discuss APIs required for private markets (which cannot use global
 Data consumers in private data markets need ways to:
 
 * search for APIs in the global XBR network API catalog
-* search for private APIs only available in the market
+* search for (possibly private) APIs available in the market
 * list data providers implementing a given API in the market
 * query for data provider metadata
 * query for a data providers' pricing of a specific API
+
+and for user and community ratings:
+
 * query for data provider ratings and comments
 * query for data provider API ratings and comments
 * submit data provider ratings and comments
