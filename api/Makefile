@@ -12,10 +12,17 @@ default:
 requirements: requirements_apt requirements_pip
 
 requirements_apt:
-	sudo apt install -y python3 python3-dev python3-venv awscli
+	sudo apt install -y \
+		python3 \
+		python3-dev \
+		python3-venv \
+		awscli
 
 requirements_pip:
-	pip install -U pip sphinx sphinx_rtd_theme
+	pip install --no-cache --upgrade \
+		pip sphinx \
+		sphinx_rtd_theme \
+		sphinxcontrib_xbr
 
 clean:
 	-rm -rf ./_build
