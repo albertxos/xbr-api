@@ -1,0 +1,26 @@
+{
+  "people": [
+    {
+      "name": "John Doe",
+      "id": 1234,
+      "email": "jdoe@example.com",
+      "phones": [
+        {
+          "number": "555-4321",
+          "type": "HOME"
+        }
+      ]
+    },
+    {
+      "name": "Homer Simpson",
+      "id": 555,
+      "email": "js@simpsons.org",
+      "phones": [
+        {
+          "number": "111-222-99997733",
+          "type": "HOME"
+        }
+      ]
+    }
+  ]
+}

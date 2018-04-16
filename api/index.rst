@@ -11,6 +11,7 @@ Fork XBR API on `GitHub <https://github.com/xbr/xbr-api>`_ and contribute!
    :maxdepth: 3
    :caption: XBR API Hub Namespaces:
 
+   apitest/index.rst
    namespace/network/xbr/index.rst
    namespace/com/example/index.rst
    namespace/org/genivi/index.rst

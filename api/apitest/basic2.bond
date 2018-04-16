@@ -1,0 +1,175 @@
+//import "bond";
+
+//namespace xbr.mobility.roadtracker;
+namespace com.example.inventory;
+
+[Validate("True")]
+struct Param
+{
+    [Max("100")]
+    0: uint32 value;
+}
+
+
+struct Result
+{
+    // This is a heinzelmann string.
+    0: uint32 value;
+
+    [help("Unprocessed coins. These can be consumed at a later time.")]
+    1: uint32 overflow;
+}
+
+[service_id("MyExample")]
+[xbr.uuid("a1f7d599-dbef-4c43-aed1-11be347f093f")]
+service Example
+{
+    [Tracing("enabled")]
+    Result get_road_condition(Param);
+}
+
+struct Operation
+{
+}
+
+struct Settings
+{
+}
+
+struct Limit
+{
+}
+
+struct Stats
+{
+}
+
+service Calculator
+{
+    [xbr.uri("com.example.machine.<machine_id>.calculate")]
+    Result calculate (Operation);
+
+    void configure (Settings);
+    Stats get_stats ();
+
+    Result running_sum (stream Operation);
+    stream Result compute_primes (Limit);
+    stream Result start_rpn_session (stream Operation);
+
+//    stream Result on_compute_started (bond.Void);
+//    stream Result on_compute_started (nothing);
+}
+
+
+struct Record
+{
+    0: string          name;
+    1: vector<double>  items;
+};
+
+struct AboutNothing
+{
+    0: uint16 n = nothing;
+    1: string name = nothing;
+    2: list<float> floats = nothing;
+}
+
+
+using uuid = string;
+
+
+struct Product
+{
+    0: string uuid = nothing;
+    1: string name = nothing;
+    2: string descr = nothing;
+    3: uint32 price = nothing;
+    4: uint32 stock = nothing;
+    5: list<string> tags = nothing;
+}
+
+
+struct ProductId
+{
+    0: string uuid;
+}
+
+
+
+[topic("on_product_deleted")]
+[help("Event fired when a product was deleted from the product catalog.")]
+struct ProductDeleted
+{
+    [help("The ID of the product that was deleted from the product catalog.")]
+    0: required uuid id;
+
+    [help("Optional user notes eg for reasons of product removal.")]
+    1: string notes;
+
+    [help("Optional user hints with replacement product IDs.")]
+    2: list<string> replacements;
+}
+
+[topic("on_product_updated")]
+[help("Event fired when a product was modified in the product catalog.")]
+struct ProductUpdated
+{
+    [help("The ID of the product that was updated in the product catalog.")]
+    0: required string uuid;
+
+    [help("New product name (only present if the value changed).")]
+    1: string name = nothing;
+    2: string descr = nothing;
+    3: uint32 price = nothing;
+    4: uint32 stock = nothing;
+    5: list<string> tags = nothing;
+}
+
+//using ProductIds = list<ProductId>;
+
+[help("List of producs IDs.")]
+struct ProductIds
+{
+    0: list<string> uuids;
+}
+
+[help("Product search query parameters.")]
+struct ProductQuery
+{
+    [help("Filter returned products by minimum stock given.")]
+    0: uint32 min_stock = nothing;
+
+    [help("Filter the returned produces by the maximum price given (in USD).")]
+    1: uint32 max_price = nothing;
+
+    [help("Filter the returned products by name matching this like-clause.")]
+    2: string name_like = nothing;
+
+    [help("Filter the returned produces by description matching this like-clause.")]
+    3: string descr_like = nothing;
+}
+
+
+[help("Product inventory service.")]
+service ProductInventory
+{
+    [help("Create a new product given the product definition.")]
+    ProductId create_product (Product);
+
+    [help("Update an existing product. Updates one or more attributes")]
+    ProductUpdated update_product (Product);
+
+    [help("Delete an existing product.")]
+    [publishes("on_product_deleted")]
+    [raises("xbr.error.no_such_object")]
+    ProductDeleted delete_product (ProductId);
+
+    [help("Get a list of product IDs.")]
+    ProductIds get_products ();
+
+    [help("Get the definition of a product.")]
+    Product get_product (ProductId);
+
+    [help("Find products by query.")]
+    ProductIds find_products (ProductQuery);
+}

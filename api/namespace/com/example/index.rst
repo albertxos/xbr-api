@@ -13,3 +13,4 @@ The ``com.example`` namespace serves to hold XBR API examples and cannot be regi
    :maxdepth: 2
 
    basic.rst
+   basic2.rst
